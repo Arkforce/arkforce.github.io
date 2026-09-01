@@ -2,6 +2,12 @@
 
 Aziz Khodzhaev's interactive infrastructure and platform engineering portfolio, built with Three.js and Vite.
 
+## Design versions
+
+- `/` - cinematic wireframe cloud orb
+- `/v2/` - orbital infrastructure command center
+- `/v3/` - editorial architectural data field
+
 ## Run locally
 
 ```bash
