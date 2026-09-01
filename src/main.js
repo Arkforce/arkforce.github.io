@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import './style.css';
 
 const canvas = document.querySelector('#scene');
 const scene = new THREE.Scene();
