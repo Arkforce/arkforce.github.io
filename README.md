@@ -4,7 +4,7 @@ Aziz Khodzhaev's interactive infrastructure and platform engineering portfolio, 
 
 ## Design versions
 
-- `/` - cinematic wireframe cloud orb
+- `/` - deployed editorial architectural data field (Version 3)
 - `/v2/` - orbital infrastructure command center
 - `/v3/` - editorial architectural data field
 

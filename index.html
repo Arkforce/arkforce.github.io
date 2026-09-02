@@ -3,149 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Aziz Khodzhaev — infrastructure and platform engineer automating secure, observable hybrid-cloud systems." />
-    <meta name="theme-color" content="#080b10" />
-    <title>Aziz Khodzhaev — Infrastructure & Platform Engineer</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"
-        }
-      }
-    </script>
+    <meta name="theme-color" content="#ecebe5" />
+    <meta name="description" content="Aziz Khodzhaev — infrastructure and platform engineer making complex hybrid systems visible, automated, and reliable." />
+    <link rel="canonical" href="https://arkforce.github.io/" />
+    <title>Aziz Khodzhaev — Infrastructure, Made Visible</title>
+    <link rel="stylesheet" href="/v3/style.css" />
+    <link rel="stylesheet" href="/production.css" />
+    <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
   </head>
-  <body>
-    <canvas id="scene" aria-hidden="true"></canvas>
-
-    <header class="site-header">
-      <a class="logo" href="#home" aria-label="Back to top">AK<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="/v2/">V2</a>
-        <a href="/v3/">V3</a>
-      </nav>
-      <button class="sound-toggle" type="button" aria-label="Toggle animation" aria-pressed="false">
-        <span></span><span></span><span></span>
-      </button>
+  <body class="production">
+    <canvas id="terrain" aria-hidden="true"></canvas>
+    <header>
+      <a class="mark" href="#home">AZIZ<br />KHODZHAEV</a>
+      <p>Infrastructure &amp; Platform Engineering<br />Chicago, Illinois</p>
+      <nav aria-label="Main navigation"><a href="#work">WORK</a><a href="#method">METHOD</a><a href="mailto:khodzhaev@gmail.com">EMAIL</a></nav>
     </header>
 
     <main>
       <section class="hero" id="home">
-        <div class="eyebrow reveal">Hybrid Cloud · Automation · Observability</div>
-        <h1 class="reveal">Let’s engineer infrastructure<br />teams <em>trust.</em></h1>
-        <p class="hero-copy reveal">I’m Aziz Khodzhaev, an infrastructure and platform engineer building automated, observable, and secure systems across AWS, Azure, and VMware.</p>
-        <div class="hero-actions reveal">
-          <a class="button primary" href="#work">Explore my work <span>↘</span></a>
-          <a class="text-link" href="#contact">Let’s work together <span>→</span></a>
-        </div>
-        <div class="impact-stats reveal" aria-label="Career highlights">
-          <div><strong>1,000+</strong><span>servers supported</span></div>
-          <div><strong>100+</strong><span>hosts migrated</span></div>
-          <div><strong>30 → 2–5</strong><span>minutes per change</span></div>
-          <div><strong>3</strong><span>cloud &amp; compute platforms</span></div>
-        </div>
-        <div class="scroll-cue" aria-hidden="true"><span>Scroll to explore</span><i></i></div>
+        <div class="hero-title"><span>Infrastructure</span><h1>made <em>visible.</em></h1></div>
+        <div class="hero-bottom"><p>I design and automate hybrid systems across cloud and on-premises—making operations observable, repeatable, and easier to trust.</p><a href="#work">Scroll to work <i>↓</i></a></div>
+        <aside><span>LIVE FIELD</span><b id="field-value">72.4</b><small>system confidence</small></aside>
       </section>
 
-      <section class="work section" id="work">
-        <div class="section-heading">
-          <span class="section-number">01</span>
-          <h2>Selected work</h2>
-          <p>Measurable improvements to real infrastructure.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card card-wide">
-            <div class="project-visual visual-iam">
-              <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-              <div class="core">IaC</div>
-            </div>
-            <div class="project-info">
-              <span>ANSIBLE/AWX · TERRAFORM · POWERSHELL</span>
-              <h3>Hybrid Infrastructure Automation</h3>
-              <p>Reusable lifecycle workflows across AWS, Azure, and VMware—including storage automation that reduced a routine 30+ minute change to roughly 2–5 minutes per server.</p>
-              <a href="#contact" aria-label="Discuss the hybrid infrastructure automation project">Discuss the project →</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-platform">
-              <div class="terminal"><i></i><i></i><i></i><code>$ provision --safe<br><span>✓ role created</span></code></div>
-            </div>
-            <div class="project-info">
-              <span>GIT · YAML · CI/CD · DESIRED STATE</span>
-              <h3>Configuration as Code</h3>
-              <p>Git-controlled administrator access, DNS, and DHCP configuration with pull-request review and automated remediation of unauthorized drift.</p>
-              <a href="#contact">Discuss the project →</a>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-visual visual-ops">
-              <div class="pulse pulse-one"></div><div class="pulse pulse-two"></div><div class="pulse pulse-three"></div>
-            </div>
-            <div class="project-info">
-              <span>AWS · GRAFANA · OPENTELEMETRY</span>
-              <h3>Multi-Account Observability</h3>
-              <p>Centralized Amazon FSx capacity, health, availability, and performance monitoring across multiple AWS accounts and regions.</p>
-              <a href="#contact">Discuss the project →</a>
-            </div>
-          </article>
-          <article class="project-card card-wide ai-card">
-            <div class="project-visual visual-ai" aria-hidden="true">
-              <div class="ai-flow">
-                <span class="ai-node node-alert">Alerts</span>
-                <span class="ai-node node-telemetry">Telemetry</span>
-                <span class="ai-node node-jira">Jira</span>
-                <span class="ai-node node-runbooks">Runbooks</span>
-                <span class="ai-brain">AI<span>orchestrator</span></span>
-                <i class="flow-line line-one"></i>
-                <i class="flow-line line-two"></i>
-                <i class="flow-line line-three"></i>
-                <i class="flow-line line-four"></i>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>AI/LLM · SPLUNK · GRAFANA · JIRA</span>
-              <h3>AI-Orchestrated Incident Investigation</h3>
-              <p>A prototype workflow that correlates infrastructure alerts, telemetry, Jira incident context, and operational runbooks. LLM-assisted analysis synthesizes the evidence to accelerate complex troubleshooting and guide root-cause investigation.</p>
-              <a href="#contact">Discuss the project →</a>
-            </div>
-          </article>
+      <section class="numbers">
+        <div><span>01 / SCALE</span><b>1,000+</b><p>servers across enterprise hybrid infrastructure</p></div>
+        <div><span>02 / MIGRATION</span><b>100+</b><p>hosts moved from on-premises into cloud environments</p></div>
+        <div><span>03 / AUTOMATION</span><b>6–15×</b><p>faster execution for routine infrastructure changes</p></div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="work-heading"><span>Selected systems / 2026</span><h2>Four ways to<br /><em>remove friction.</em></h2></div>
+        <div class="case-grid">
+          <article><span>01</span><div class="case-color coral"></div><small>AWS · AZURE · VMWARE</small><h3>Hybrid Infrastructure Automation</h3><p>Reusable provisioning and lifecycle workflows that turn slow, manual changes into safe multi-server execution.</p></article>
+          <article><span>02</span><div class="case-color blue"></div><small>GIT · YAML · CI/CD</small><h3>Configuration as Code</h3><p>Reviewed desired state for access, DNS, and DHCP with automation that detects and corrects drift.</p></article>
+          <article><span>03</span><div class="case-color acid"></div><small>GRAFANA · OTEL · AWS</small><h3>Multi-Account Observability</h3><p>A consolidated view of capacity, health, availability, and performance across regions and accounts.</p></article>
+          <article><span>04</span><div class="case-color violet"></div><small>AI/LLM · JIRA · TELEMETRY</small><h3>AI-Orchestrated Investigation</h3><p>A prototype that assembles alerts, operational context, and runbooks to guide root-cause analysis.</p></article>
         </div>
       </section>
 
-      <section class="about section" id="about">
-        <div class="section-heading">
-          <span class="section-number">02</span>
-          <h2>Engineering with intent</h2>
-        </div>
-        <div class="about-grid">
-          <p class="about-lead">I turn operational complexity into <em>repeatable systems</em> teams can trust.</p>
-          <div class="about-copy">
-            <p>I work across hybrid cloud, infrastructure automation, identity, networking, observability, and disaster recovery. My focus is practical platform engineering: Git-controlled changes, reusable automation, desired-state enforcement, and monitoring that helps teams act before incidents grow.</p>
-            <p>Based in the Chicago area, I’ve supported enterprise environments at 1,000+ server scale and cloud migration programs spanning more than 100 hosts.</p>
-            <div class="skills">
-              <span>AWS</span><span>Azure</span><span>Terraform</span><span>Ansible/AWX</span><span>PowerShell</span><span>VMware</span><span>Observability</span><span>Git/CI/CD</span>
-            </div>
-          </div>
-        </div>
+      <section class="method" id="method">
+        <p class="vertical">MY OPERATING PRINCIPLE</p>
+        <blockquote>“The best infrastructure<br />doesn’t demand attention.<br /><em>It creates confidence.</em>”</blockquote>
+        <div><p>My work connects infrastructure as code, configuration management, observability, identity, and recovery into systems that behave predictably.</p><ul><li>AWS</li><li>Azure</li><li>Terraform</li><li>Ansible / AWX</li><li>PowerShell</li><li>VMware</li></ul></div>
       </section>
 
-      <section class="contact section" id="contact">
-        <span class="section-number">03</span>
-        <p>Have an ambitious infrastructure or automation problem?</p>
-        <h2>Let’s make it<br /><em>feel simple.</em></h2>
-        <a class="button primary" href="mailto:khodzhaev@gmail.com">Start a conversation <span>↗</span></a>
+      <section class="contact">
+        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com ↗</a>
       </section>
     </main>
-
-    <footer>
-      <a class="logo" href="#home">AK<span>.</span></a>
-      <p>Built with Three.js and curiosity.</p>
-      <div><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></div>
-    </footer>
-
-    <script type="module" src="/src/main.js"></script>
+    <footer><span>© 2026</span><span>AZIZ KHODZHAEV</span><a href="#home">BACK TO TOP ↑</a></footer>
+    <script type="module" src="/v3/main.js"></script>
   </body>
 </html>
