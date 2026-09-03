@@ -39,7 +39,6 @@ addEventListener('scroll', () => { pageProgress = scrollY / Math.max(document.bo
 addEventListener('resize', () => { camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); renderer.setPixelRatio(Math.min(devicePixelRatio, 2)); });
 
 const readout = document.querySelector('#field-value');
-document.querySelector('#year').textContent = new Date().getFullYear();
 const clock = new THREE.Clock();
 function animate() {
   const t = clock.getElapsedTime();
