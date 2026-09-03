@@ -55,7 +55,7 @@ function animate() {
   field.rotation.x += ((pointer.y * .05) - field.rotation.x) * .025;
   field.position.y = -2.4 - pageProgress * 8;
   orb.position.y = 2.5 + Math.sin(t * 1.2) * .25; orb.rotation.y = t;
-  readout.textContent = (72.4 + Math.sin(t * .7) * 3.8).toFixed(1);
+  readout.textContent = Math.round(121 + Math.sin(t * .7) * 3);
   renderer.render(scene, camera); requestAnimationFrame(animate);
 }
 animate();
