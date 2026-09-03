@@ -1,0 +1,146 @@
+.flagship-case {
+  margin-top: 7rem;
+  padding: clamp(2rem, 5vw, 5rem);
+  border: 1px solid #111310;
+  background: #111310;
+  color: #ecebe5;
+}
+
+.flagship-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: flex-start;
+  padding-bottom: 4rem;
+}
+
+.flagship-heading > span,
+.case-narrative > div > span {
+  font: 400 0.56rem 'DM Mono', monospace;
+  letter-spacing: 0.12em;
+  color: #aeb2a8;
+}
+
+.flagship-heading h3 {
+  max-width: 760px;
+  margin: 0;
+  font: 400 clamp(3rem, 6vw, 6.5rem)/0.86 'Instrument Serif', serif;
+  letter-spacing: -0.045em;
+}
+
+.flagship-heading h3 em {
+  color: #c4f23b;
+}
+
+.case-architecture {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1.35fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.3rem;
+  border: 1px solid rgba(236, 235, 229, 0.2);
+  background-image: linear-gradient(rgba(196, 242, 59, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(196, 242, 59, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.case-architecture > i {
+  color: #c4f23b;
+  font-style: normal;
+}
+
+.architecture-node,
+.architecture-targets span {
+  padding: 1rem;
+  border: 1px solid rgba(236, 235, 229, 0.24);
+  background: rgba(17, 19, 16, 0.88);
+}
+
+.architecture-node small,
+.architecture-node b,
+.architecture-node span {
+  display: block;
+}
+
+.architecture-node small {
+  color: #c4f23b;
+  font: 400 0.52rem 'DM Mono', monospace;
+}
+
+.architecture-node b {
+  margin: 0.7rem 0 0.25rem;
+  font-weight: 400;
+}
+
+.architecture-node span,
+.architecture-targets span {
+  color: #aeb2a8;
+  font: 300 0.56rem 'DM Mono', monospace;
+}
+
+.architecture-core {
+  border-color: #c4f23b;
+  box-shadow: 0 0 35px rgba(196, 242, 59, 0.08);
+}
+
+.architecture-targets {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.architecture-targets span {
+  padding: 0.45rem 0.65rem;
+}
+
+.case-narrative {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding-top: 3.5rem;
+}
+
+.case-narrative p {
+  margin: 1rem 0 0;
+  color: #aeb2a8;
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+.case-narrative strong {
+  color: #ecebe5;
+  font-weight: 500;
+}
+
+.case-narrative .result {
+  padding-left: 2rem;
+  border-left: 2px solid #c4f23b;
+}
+
+@media (max-width: 900px) {
+  .flagship-heading {
+    display: block;
+  }
+
+  .flagship-heading h3 {
+    margin-top: 2rem;
+  }
+
+  .case-architecture {
+    grid-template-columns: 1fr;
+  }
+
+  .case-architecture > i {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .case-narrative {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .case-narrative .result {
+    padding: 1.5rem 0 0;
+    border-top: 2px solid #c4f23b;
+    border-left: 0;
+  }
+}

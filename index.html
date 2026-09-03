@@ -9,6 +9,7 @@
     <title>Aziz Khodzhaev — Infrastructure, Made Visible</title>
     <link rel="stylesheet" href="/v3/style.css" />
     <link rel="stylesheet" href="/production.css" />
+    <link rel="stylesheet" href="/case-study.css" />
     <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
   </head>
   <body class="production">
@@ -38,8 +39,22 @@
           <article><span>01</span><div class="case-color coral"></div><small>AWS · AZURE · VMWARE</small><h3>Hybrid Infrastructure Automation</h3><p>Reusable provisioning and lifecycle workflows that turn slow, manual changes into safe multi-server execution.</p></article>
           <article><span>02</span><div class="case-color blue"></div><small>GIT · YAML · CI/CD</small><h3>Configuration as Code</h3><p>Reviewed desired state for access, DNS, and DHCP with automation that detects and corrects drift.</p></article>
           <article><span>03</span><div class="case-color acid"></div><small>GRAFANA · OTEL · AWS</small><h3>Multi-Account Observability</h3><p>A consolidated view of capacity, health, availability, and performance across regions and accounts.</p></article>
-          <article><span>04</span><div class="case-color violet"></div><small>AI/LLM · JIRA · TELEMETRY</small><h3>AI-Orchestrated Investigation</h3><p>A prototype that assembles alerts, operational context, and runbooks to guide root-cause analysis.</p></article>
+          <article><span>04</span><div class="case-color violet"></div><small>AI/LLM · JIRA · TELEMETRY</small><h3>AI-Orchestrated Investigation</h3><p>Assembles alerts, operational context, and runbooks into a guided root-cause workflow—built and running against live Jira and telemetry data.</p></article>
         </div>
+        <article class="flagship-case" aria-labelledby="flagship-title">
+          <div class="flagship-heading"><span>FLAGSHIP CASE STUDY / 05</span><h3 id="flagship-title">From repetitive change<br />to <em>repeatable automation.</em></h3></div>
+          <div class="case-architecture" aria-label="Automation workflow: Git request to Bitbucket pipeline to automation engine to VMware, Azure, and AWS">
+            <div class="architecture-node"><small>01</small><b>Git request</b><span>reviewed change</span></div><i>→</i>
+            <div class="architecture-node"><small>02</small><b>Bitbucket</b><span>pipeline trigger</span></div><i>→</i>
+            <div class="architecture-node architecture-core"><small>03</small><b>Automation</b><span>AWX · PowerShell · Terraform</span></div><i>→</i>
+            <div class="architecture-targets"><span>VMware</span><span>Azure</span><span>AWS</span></div>
+          </div>
+          <div class="case-narrative">
+            <div><span>PROBLEM</span><p>Routine storage expansion was a manual, platform-specific task across VMware, Azure, and AWS. A single server change regularly consumed more than 30 minutes, and repeating the process across multiple systems increased operational toil and the opportunity for inconsistent execution.</p></div>
+            <div><span>APPROACH</span><p>I built reusable, pipeline-driven workflows using Ansible/AWX, PowerShell, and Terraform. Infrastructure changes moved through Git and pull-request review before parameterized automation executed the appropriate platform workflow. The same operating pattern could handle individual servers or coordinated multi-server changes without relying on separate manual procedures for every platform.</p></div>
+            <div class="result"><span>RESULT</span><p>Execution dropped from <strong>30+ minutes</strong> to approximately <strong>2–5 minutes per server</strong>—a 6–15× improvement. The workflow made a common lifecycle task faster, repeatable, reviewable, and safer to run at enterprise scale.</p></div>
+          </div>
+        </article>
       </section>
 
       <section class="method" id="method">
@@ -52,7 +67,7 @@
         <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com ↗</a>
       </section>
     </main>
-    <footer><span>© 2026</span><span>AZIZ KHODZHAEV</span><a href="#home">BACK TO TOP ↑</a></footer>
+    <footer><span>© <span id="year"></span></span><span>AZIZ KHODZHAEV</span><a href="#home">BACK TO TOP ↑</a></footer>
     <script type="module" src="/v3/main.js"></script>
   </body>
 </html>
