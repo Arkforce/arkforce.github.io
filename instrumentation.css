@@ -100,7 +100,7 @@ body.instrumentation {
 }
 
 .instrumentation .hero-title > span {
-  margin: 9vh 0 1.4rem;
+  margin: 9vh 0 1.4rem 0.75rem;
   color: var(--green);
   font: 500 clamp(0.8rem, 1.2vw, 1rem) 'JetBrains Mono', monospace;
   letter-spacing: 0;
