@@ -404,12 +404,29 @@ body.instrumentation {
   font-weight: 500;
 }
 
-.instrumentation .flagship-case {
+.instrumentation .case-study-list {
+  display: grid;
+  gap: 2rem;
   margin-top: 7rem;
+}
+
+.instrumentation .flagship-case {
+  margin-top: 0;
   padding: clamp(2rem, 5vw, 5rem);
   border-color: var(--line);
   background: var(--panel);
   color: var(--text);
+}
+
+.instrumentation .project-case .flagship-heading {
+  display: grid;
+  grid-template-columns: minmax(140px, 0.28fr) 1fr;
+  gap: 2rem;
+  padding-bottom: 3rem;
+}
+
+.instrumentation .project-case .flagship-heading > div {
+  max-width: 850px;
 }
 
 .instrumentation .flagship-heading > span,
@@ -422,6 +439,14 @@ body.instrumentation {
 .instrumentation .flagship-heading h3 {
   font: 500 clamp(2.8rem, 5.5vw, 5.8rem)/0.95 'Inter', sans-serif;
   letter-spacing: -0.06em;
+}
+
+.instrumentation .case-summary {
+  max-width: 700px;
+  margin: 1.5rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .instrumentation .case-architecture {
@@ -460,6 +485,74 @@ body.instrumentation {
 
 .instrumentation .case-narrative .result {
   border-color: var(--green);
+}
+
+.instrumentation .case-proof {
+  display: flex;
+  align-items: stretch;
+  gap: 0.6rem;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.instrumentation .case-proof span,
+.instrumentation .case-proof strong {
+  flex: 1;
+  display: grid;
+  min-height: 64px;
+  place-items: center;
+  padding: 0.8rem;
+  border: 1px solid var(--line);
+  background: rgba(22, 27, 34, 0.94);
+  color: var(--muted);
+  text-align: center;
+  font: 500 0.68rem/1.5 'JetBrains Mono', monospace;
+}
+
+.instrumentation .case-proof strong {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.instrumentation .case-proof i {
+  align-self: center;
+  color: var(--green);
+  font-style: normal;
+}
+
+.instrumentation .case-evidence {
+  display: grid;
+  grid-template-columns: minmax(130px, 0.3fr) minmax(180px, 0.45fr) 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+  border-block: 1px solid var(--line);
+}
+
+.instrumentation .case-evidence span,
+.instrumentation .case-evidence b {
+  font: 500 0.68rem/1.5 'JetBrains Mono', monospace;
+}
+
+.instrumentation .case-evidence span {
+  color: var(--green);
+}
+
+.instrumentation .case-evidence b {
+  color: var(--text);
+}
+
+.instrumentation .case-evidence p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.6;
 }
 
 .instrumentation .method {
@@ -528,7 +621,7 @@ body.instrumentation {
 .instrumentation #work,
 .instrumentation #method,
 .instrumentation #contact,
-.instrumentation #automation-case-study {
+.instrumentation .project-case {
   scroll-margin-top: 88px;
 }
 
@@ -673,6 +766,28 @@ body.instrumentation {
 
   .instrumentation .flagship-heading h3 {
     font-size: clamp(2.6rem, 12vw, 4.6rem);
+  }
+
+  .instrumentation .project-case .flagship-heading {
+    display: block;
+  }
+
+  .instrumentation .project-case .flagship-heading > div {
+    margin-top: 1.5rem;
+  }
+
+  .instrumentation .case-proof {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .instrumentation .case-proof i {
+    display: none;
+  }
+
+  .instrumentation .case-evidence {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
 
   .instrumentation .method blockquote {

@@ -4,6 +4,51 @@ const walkthroughValue = document.querySelector('#walkthrough-value');
 const trace = document.querySelector('#signal-trace');
 const traceContext = trace?.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+const traceSamples = Array(64).fill(0);
+let pageProgress = 0;
+let progressFrame = 0;
+
+function drawProgressTrace(progress) {
+  if (!traceContext || !trace) return;
+  const width = trace.width;
+  const height = trace.height;
+  traceContext.clearRect(0, 0, width, height);
+  traceContext.strokeStyle = '#21262d';
+  traceContext.lineWidth = 1;
+  for (let y = 18; y < height; y += 18) {
+    traceContext.beginPath();
+    traceContext.moveTo(0, y + .5);
+    traceContext.lineTo(width, y + .5);
+    traceContext.stroke();
+  }
+  traceSamples.push(progress);
+  traceSamples.shift();
+  traceContext.beginPath();
+  traceSamples.forEach((sample, index) => {
+    const x = index / (traceSamples.length - 1) * width;
+    const y = height - sample / 100 * (height - 10) - 5;
+    if (index === 0) traceContext.moveTo(x, y); else traceContext.lineTo(x, y);
+  });
+  traceContext.strokeStyle = '#3fb950';
+  traceContext.lineWidth = 2;
+  traceContext.stroke();
+}
+
+function updatePageProgress() {
+  progressFrame = 0;
+  pageProgress = scrollY / Math.max(document.documentElement.scrollHeight - innerHeight, 1);
+  const explored = Math.round(Math.max(0, Math.min(pageProgress, 1)) * 100);
+  if (walkthroughValue) walkthroughValue.textContent = `${explored}%`;
+  drawProgressTrace(explored);
+}
+
+function queueProgressUpdate() {
+  if (!progressFrame) progressFrame = requestAnimationFrame(updatePageProgress);
+}
+
+addEventListener('scroll', queueProgressUpdate, { passive: true });
+addEventListener('resize', queueProgressUpdate);
+updatePageProgress();
 
 const navigationLinks = [...document.querySelectorAll('header nav a[href^="#"]')];
 const navigationSections = navigationLinks
@@ -95,44 +140,16 @@ function startVisual(THREE) {
 
   const pointer = new THREE.Vector2();
   const clock = new THREE.Clock();
-  const traceSamples = Array(64).fill(0);
-  let pageProgress = scrollY / Math.max(document.body.scrollHeight - innerHeight, 1);
-  let lastTraceSample = 0;
   let animationFrame = 0;
   let running = false;
 
-  function drawTrace(progress) {
-    if (!traceContext || !trace) return;
-    const width = trace.width;
-    const height = trace.height;
-    traceContext.clearRect(0, 0, width, height);
-    traceContext.strokeStyle = '#21262d';
-    traceContext.lineWidth = 1;
-    for (let y = 18; y < height; y += 18) {
-      traceContext.beginPath();
-      traceContext.moveTo(0, y + .5);
-      traceContext.lineTo(width, y + .5);
-      traceContext.stroke();
-    }
-    traceSamples.push(progress);
-    traceSamples.shift();
-    traceContext.beginPath();
-    traceSamples.forEach((sample, index) => {
-      const x = index / (traceSamples.length - 1) * width;
-      const y = height - sample / 100 * (height - 10) - 5;
-      if (index === 0) traceContext.moveTo(x, y); else traceContext.lineTo(x, y);
-    });
-    traceContext.strokeStyle = '#3fb950';
-    traceContext.lineWidth = 2;
-    traceContext.stroke();
-  }
-
   function renderFrame() {
     const t = reducedMotion.matches ? 0 : clock.getElapsedTime();
+    const visualProgress = reducedMotion.matches ? 0 : pageProgress;
     for (let z = 0; z < grid; z++) for (let x = 0; x < grid; x++) {
       const i = z * grid + x;
       const wave = reducedMotion.matches ? 0 : Math.sin(t * .85 + x * .55 + z * .38) * .25;
-      const h = Math.max(.15, heights[i] + wave + pageProgress * Math.sin(i) * .8);
+      const h = Math.max(.15, heights[i] + wave + visualProgress * Math.sin(i) * .8);
       dummy.position.set((x - grid / 2) * .72, h / 2, (z - grid / 2) * .72);
       dummy.scale.set(1, h, 1);
       dummy.updateMatrix();
@@ -147,9 +164,9 @@ function startVisual(THREE) {
     }
     planeGeometry.attributes.position.needsUpdate = true;
 
-    const observability = THREE.MathUtils.smoothstep(pageProgress, 0, 1);
-    field.rotation.y += ((-.25 + pageProgress * 1.1 + pointer.x * .13) - field.rotation.y) * (reducedMotion.matches ? 1 : .025);
-    field.rotation.x += ((pointer.y * .05) - field.rotation.x) * (reducedMotion.matches ? 1 : .025);
+    const observability = THREE.MathUtils.smoothstep(visualProgress, 0, 1);
+    field.rotation.y += ((-.25 + visualProgress * 1.1 + (reducedMotion.matches ? 0 : pointer.x * .13)) - field.rotation.y) * (reducedMotion.matches ? 1 : .025);
+    field.rotation.x += (((reducedMotion.matches ? 0 : pointer.y * .05)) - field.rotation.x) * (reducedMotion.matches ? 1 : .025);
     field.position.y = -2.4 + observability * 1.5;
     columnMaterial.opacity = .3 + observability * .7;
     plane.material.opacity = .04 + observability * .24;
@@ -160,12 +177,6 @@ function startVisual(THREE) {
     orb.position.y = 2.5 + (reducedMotion.matches ? 0 : Math.sin(t * 1.2) * .25);
     orb.rotation.y = t;
 
-    const explored = Math.round(THREE.MathUtils.clamp(pageProgress, 0, 1) * 100);
-    if (walkthroughValue) walkthroughValue.textContent = `${explored}%`;
-    if (t - lastTraceSample > .12 || reducedMotion.matches) {
-      drawTrace(explored);
-      lastTraceSample = t;
-    }
     renderer.render(scene, camera);
   }
 
@@ -198,10 +209,6 @@ function startVisual(THREE) {
   addEventListener('pointermove', (event) => {
     pointer.set(event.clientX / innerWidth - .5, event.clientY / innerHeight - .5);
   });
-  addEventListener('scroll', () => {
-    pageProgress = scrollY / Math.max(document.body.scrollHeight - innerHeight, 1);
-    if (reducedMotion.matches) startRendering();
-  }, { passive: true });
   addEventListener('resize', () => {
     camera.aspect = innerWidth / innerHeight;
     camera.updateProjectionMatrix();
