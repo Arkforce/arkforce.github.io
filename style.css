@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=DM+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap");
 
 :root {
   color-scheme: light;
@@ -10,7 +10,7 @@
   --lime: #c7e8ae;
   --dark: #12291f;
   --mono: "DM Mono", monospace;
-  --serif: "Instrument Serif", Georgia, serif;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
   font-family: "DM Sans", Arial, sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -102,11 +102,16 @@ button[hidden] {
   letter-spacing: -0.4px;
 }
 .brand-symbol {
-  font-size: 26px;
-  font-weight: 500;
-  letter-spacing: -3px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -1px;
   border: 1px solid var(--ink);
-  padding: 9px 11px 12px 8px;
+  padding: 0;
 }
 .header-note,
 .eyebrow,
@@ -172,20 +177,23 @@ nav a:hover,
   flex-shrink: 0;
 }
 .hero h1 {
+  font-family: var(--display);
   font-size: clamp(58px, 6.7vw, 96px);
-  letter-spacing: -0.065em;
+  letter-spacing: -0.025em;
   line-height: 0.99;
   font-weight: 500;
   margin: 0 0 28px;
 }
 h1 em,
 h2 em {
-  font-family: var(--serif);
-  font-weight: 400;
-  letter-spacing: -0.035em;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: inherit;
+  color: var(--green);
 }
 h1 em {
-  font-size: 1.15em;
+  font-size: 1em;
 }
 .hero-description {
   font-size: 17px;
@@ -382,14 +390,15 @@ h1 em {
   margin-bottom: 22px;
 }
 h2 {
+  font-family: var(--display);
   font-size: clamp(42px, 4.6vw, 66px);
-  font-weight: 450;
-  letter-spacing: -0.045em;
+  font-weight: 500;
+  letter-spacing: -0.02em;
   line-height: 1.06;
   margin: 0;
 }
 h2 em {
-  font-size: 1.12em;
+  font-size: 1em;
 }
 .section-heading > p {
   color: var(--muted);
@@ -796,7 +805,7 @@ h2 em {
 }
 .contact-heading h2 {
   font-size: clamp(65px, 9.5vw, 138px);
-  letter-spacing: -0.055em;
+  letter-spacing: -0.025em;
   line-height: 0.98;
 }
 .contact-arrow {
@@ -857,9 +866,10 @@ footer a {
   padding-bottom: 45px;
 }
 .detail-hero h1 {
+  font-family: var(--display);
   font-size: clamp(42px, 5.5vw, 78px);
   font-weight: 500;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.02em;
   line-height: 1.03;
   margin: 0;
 }
@@ -1039,8 +1049,8 @@ footer a {
     gap: 9px;
   }
   .brand-symbol {
-    font-size: 21px;
-    padding: 7px 9px 10px 6px;
+    font-size: 20px;
+    padding: 0;
   }
   .nav-contact {
     gap: 9px;
@@ -1233,6 +1243,9 @@ footer a {
     display: none;
   }
   .brand-symbol {
+    display: grid;
+  }
+  .brand > span:last-child {
     display: none;
   }
   .hero h1 {
