@@ -539,6 +539,7 @@ body.instrumentation {
 
   .instrumentation .hero-title > span {
     margin-top: 4vh;
+    margin-left: 0.125rem;
   }
 
   .instrumentation .hero h1 {
