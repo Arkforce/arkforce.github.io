@@ -40,7 +40,7 @@
           <article class="case-linked"><div class="case-color coral"></div><small>AWS / Azure / VMware</small><h3>Hybrid Infrastructure Automation</h3><p>Automated storage expansion across three platforms, reducing routine execution from 30+ minutes to approximately 2–5 minutes per server.</p><a class="case-link" href="#automation-case-study">Read case study</a></article>
           <article class="case-linked"><div class="case-color blue"></div><small>Git / YAML / CI/CD</small><h3>Configuration as Code</h3><p>Git-managed configuration for server access, DNS, and DHCP, with automation to detect drift and restore declared state.</p><a class="case-link" href="#configuration-case-study">Read case study</a></article>
           <article class="case-linked"><div class="case-color acid"></div><small>Grafana / AWS / Regional views</small><h3>Multi-Account Observability</h3><p>A consolidated view of infrastructure capacity, health, availability, and performance across AWS accounts and regions.</p><a class="case-link" href="#observability-case-study">Read case study</a></article>
-          <article class="case-linked"><div class="case-color violet"></div><small>AI/LLM / Jira / Telemetry</small><h3>AI-Assisted Incident Investigation</h3><p>A guided investigation view that brings Jira incidents, alerts, telemetry, and runbook context together for engineer review.</p><a class="case-link" href="#ai-case-study">Read case study</a></article>
+          <article class="case-linked"><div class="case-color violet"></div><small>AI / Splunk / Grafana / Microsoft Graph / AWS</small><h3>AI-Assisted Incident Investigation</h3><p>Combines context from Splunk, Grafana, Microsoft Graph, and AWS to summarize incidents, generate hypotheses, and recommend investigation steps for engineer review.</p><a class="case-link" href="#ai-case-study">Read case study</a></article>
         </div>
         <div class="signal-bus"><span>Operating scope</span><b>Environment: 1,000+ servers</b><b>Migration delivery: 100+ hosts</b><b>Storage execution: 6–15× faster</b></div>
 
@@ -58,7 +58,7 @@
             <div><span>Delivered</span><p>I built reusable workflows using Ansible/AWX, PowerShell, and pipeline-driven execution. Engineers supplied target systems and change parameters, and the automation ran the appropriate platform-specific workflow for individual or multi-server changes.</p></div>
             <div class="result"><span>Result</span><p>Routine execution dropped from <strong>30+ minutes</strong> to approximately <strong>2–5 minutes per server</strong>—a 6–15× improvement with substantially less repeated manual effort.</p></div>
           </div>
-          <div class="case-evidence"><span>Evidence</span><b>30+ min → 2–5 min</b><p>Measured routine storage-expansion execution per server.</p></div>
+          <div class="case-evidence"><span>Scope</span><b>VMware / Azure / AWS</b><p>Routine storage-expansion execution measured at 30+ minutes before automation and approximately 2–5 minutes afterward, per server.</p></div>
         </article>
 
         <article class="flagship-case project-case" id="configuration-case-study" aria-labelledby="configuration-title">
@@ -69,7 +69,7 @@
             <div><span>Delivered</span><p>I moved supported configuration into version-controlled definitions and connected them to automated execution. Git became the source of truth, with reviewable history and comparison of live configuration against declared state.</p></div>
             <div class="result"><span>Result</span><p>Supported configuration became repeatable and traceable. Engineers could inspect intended state, review changes, and reconcile drift through a consistent workflow.</p></div>
           </div>
-          <div class="case-evidence"><span>Evidence scope</span><b>Access / DNS / DHCP</b><p>Git-managed definitions and the reconciliation lifecycle; production configuration remains omitted.</p></div>
+          <div class="case-evidence"><span>Scope</span><b>Access / DNS / DHCP</b><p>Git-managed definitions and the reconciliation lifecycle; production configuration remains omitted.</p></div>
         </article>
 
         <article class="flagship-case project-case" id="observability-case-study" aria-labelledby="observability-title">
@@ -80,18 +80,18 @@
             <div><span>Delivered</span><p>I brought infrastructure telemetry into shared Grafana dashboards and organized the signals needed to review resource health, capacity, availability, and performance across environments.</p></div>
             <div class="result"><span>Result</span><p>Engineers gained a common starting point for operational checks and a more consistent way to assess monitored infrastructure across accounts and regions.</p></div>
           </div>
-          <div class="case-evidence"><span>Evidence scope</span><b>AWS accounts / Regions / Grafana</b><p>Consolidated views across capacity, health, availability, and performance; no unverified performance improvement is claimed.</p></div>
+          <div class="case-evidence"><span>Scope</span><b>AWS accounts / Regions / Grafana</b><p>Consolidated views across infrastructure capacity, health, availability, and performance.</p></div>
         </article>
 
         <article class="flagship-case project-case" id="ai-case-study" aria-labelledby="ai-title">
-          <div class="flagship-heading"><span>Case study / Guided investigation</span><div><h3 id="ai-title">AI-Assisted Incident Investigation</h3><p class="case-summary">Brought incident details and operational context into one workflow while keeping the response decision with the engineer.</p></div></div>
-          <div class="case-proof" aria-label="AI-assisted investigation workflow"><span>Jira incident</span><span>Alerts</span><span>Telemetry</span><span>Runbook context</span><i>→</i><strong>Engineer decision</strong></div>
+          <div class="flagship-heading"><span>Case study / Guided investigation</span><div><h3 id="ai-title">AI-Assisted Incident Investigation</h3><p class="case-summary">Combines operational context to summarize incidents, generate hypotheses, and recommend investigation steps while keeping the response decision with the engineer.</p></div></div>
+          <div class="case-proof ai-proof" aria-label="AI-assisted investigation workflow"><span>Connected sources<small>Splunk / Grafana / Microsoft Graph / AWS</small></span><i>→</i><span>Incident summary</span><i>→</i><span>Hypotheses</span><i>→</i><span>Recommended checks</span><i>→</i><strong>Engineer decision</strong></div>
           <div class="case-narrative">
             <div><span>Problem</span><p>Incident investigation required gathering information from separate systems before an engineer could assess the evidence and decide what to do next.</p></div>
-            <div><span>Delivered</span><p>I connected incident information and operational context in an AI-assisted workflow that brings Jira incidents, alerts, telemetry, and runbook guidance into one investigation view.</p></div>
+            <div><span>Delivered</span><p>I built an AI-assisted investigation workflow that brings together operational context from Splunk, Grafana, Microsoft Graph, and AWS. It summarizes incidents, generates hypotheses about possible causes, and recommends investigation steps. Engineers review the available evidence, validate the hypotheses, and decide what action to take.</p></div>
             <div class="result"><span>Result</span><p>The workflow provides a shared starting point for investigation. The engineer remains responsible for interpreting the evidence and choosing the operational response.</p></div>
           </div>
-          <div class="case-evidence"><span>Evidence scope</span><b>Input → Context → Engineer review</b><p>Guided context for engineer review; no faster-resolution metric or autonomous remediation is claimed.</p></div>
+          <div class="case-evidence"><span>Scope</span><b>Context → Analysis → Engineer review</b><p>Incident summaries, possible-cause hypotheses, and recommended investigation steps.</p></div>
         </article>
         </div>
       </section>

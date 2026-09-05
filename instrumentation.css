@@ -519,6 +519,17 @@ body.instrumentation {
   color: var(--green);
 }
 
+.instrumentation .case-proof span small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--muted);
+  font: 400 0.56rem/1.45 'JetBrains Mono', monospace;
+}
+
+.instrumentation .ai-proof span:first-child {
+  flex: 1.45;
+}
+
 .instrumentation .case-proof i {
   align-self: center;
   color: var(--green);
