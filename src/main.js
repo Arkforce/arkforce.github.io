@@ -50,6 +50,74 @@ addEventListener('scroll', queueProgressUpdate, { passive: true });
 addEventListener('resize', queueProgressUpdate);
 updatePageProgress();
 
+const dwellTargets = [...document.querySelectorAll('[data-view-label]')];
+const dwellOutputs = [...document.querySelectorAll('[data-dwell-output]')];
+const dwellTotals = new Map(dwellTargets.map((target) => [target.dataset.viewLabel, 0]));
+let activeDwellTarget = dwellTargets[0] ?? null;
+let dwellStartedAt = performance.now();
+let dwellPageVisible = !document.hidden;
+
+function commitDwellTime(now = performance.now()) {
+  if (!activeDwellTarget || !dwellPageVisible) return;
+  const label = activeDwellTarget.dataset.viewLabel;
+  dwellTotals.set(label, dwellTotals.get(label) + now - dwellStartedAt);
+  dwellStartedAt = now;
+}
+
+function mostViewedLabel(now = performance.now()) {
+  let winner = 'Exploring…';
+  let longest = 2000;
+  dwellTotals.forEach((duration, label) => {
+    const liveDuration = activeDwellTarget?.dataset.viewLabel === label && dwellPageVisible
+      ? duration + now - dwellStartedAt
+      : duration;
+    if (liveDuration > longest) {
+      longest = liveDuration;
+      winner = label;
+    }
+  });
+  return winner;
+}
+
+function updateDwellFact() {
+  const label = mostViewedLabel();
+  dwellOutputs.forEach((output) => { output.textContent = label; });
+}
+
+function activateDwellTarget(target) {
+  if (!target || target === activeDwellTarget) return;
+  const now = performance.now();
+  commitDwellTime(now);
+  activeDwellTarget = target;
+  dwellStartedAt = now;
+  updateDwellFact();
+}
+
+if ('IntersectionObserver' in window) {
+  const dwellObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => Math.abs(a.boundingClientRect.top + a.boundingClientRect.height / 2 - innerHeight / 2)
+        - Math.abs(b.boundingClientRect.top + b.boundingClientRect.height / 2 - innerHeight / 2));
+    if (visible[0]) activateDwellTarget(visible[0].target);
+  }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+  dwellTargets.forEach((target) => dwellObserver.observe(target));
+}
+
+document.addEventListener('visibilitychange', () => {
+  const now = performance.now();
+  if (document.hidden) {
+    commitDwellTime(now);
+    dwellPageVisible = false;
+  } else {
+    dwellPageVisible = true;
+    dwellStartedAt = now;
+  }
+  updateDwellFact();
+});
+
+setInterval(updateDwellFact, 1000);
+
 const navigationLinks = [...document.querySelectorAll('header nav a[href^="#"]')];
 const navigationSections = navigationLinks
   .map((link) => document.querySelector(link.getAttribute('href')))

@@ -22,13 +22,30 @@
     </header>
 
     <main>
-      <section class="hero" id="home">
+      <section class="hero" id="home" data-view-label="Introduction">
         <div class="hero-title"><span>Infrastructure engineering</span><h1>made <em>observable.</em></h1></div>
         <div class="hero-bottom"><p>I design and automate hybrid systems across cloud and on-premises—making operations observable, repeatable, and easier to trust.</p><div class="hero-actions"><a href="#work">View selected work</a><a href="https://github.com/Arkforce" rel="me">GitHub profile</a></div></div>
-        <aside class="session-console"><div class="console-heading"><span>Page explored</span><b id="walkthrough-value">0%</b></div><canvas id="signal-trace" width="300" height="72" aria-label="Page exploration trace"></canvas><dl><div><dt>Graphics</dt><dd id="webgl-health" aria-live="polite">loading</dd></div></dl><small>Scroll to bring the infrastructure field into focus.</small></aside>
+        <aside class="session-console">
+          <div class="console-heading">
+            <span>Page explored</span>
+            <b id="walkthrough-value">0%</b>
+          </div>
+          <canvas id="signal-trace" width="300" height="72" aria-label="Page exploration trace"></canvas>
+          <dl>
+            <div>
+              <dt>Graphics</dt>
+              <dd id="webgl-health" aria-live="polite">loading</dd>
+            </div>
+          </dl>
+          <div class="dwell-fact">
+            <span>Most viewed this visit</span>
+            <b data-dwell-output>Exploring…</b>
+          </div>
+          <small>Scroll to bring the infrastructure field into focus.</small>
+        </aside>
       </section>
 
-      <section class="numbers">
+      <section class="numbers" data-view-label="Results at a glance">
         <div><span>Enterprise scale</span><b>1,000+</b><p>servers across enterprise hybrid infrastructure</p></div>
         <div><span>Cloud migration</span><b>100+</b><p>hosts moved from on-premises into cloud environments</p></div>
         <div><span>Storage execution</span><b>6–15×</b><p>faster routine storage expansion per server</p></div>
@@ -36,7 +53,7 @@
 
       <section class="work" id="work">
         <div class="work-heading"><span>Selected systems</span><h2>Four ways to<br /><em>remove friction.</em></h2></div>
-        <div class="case-grid">
+        <div class="case-grid" data-view-label="Selected systems">
           <article class="case-linked"><div class="case-color coral"></div><small>AWS / Azure / VMware</small><h3>Hybrid Infrastructure Automation</h3><p>Automated storage expansion across three platforms, reducing routine execution from 30+ minutes to approximately 2–5 minutes per server.</p><a class="case-link" href="#automation-case-study">Read case study</a></article>
           <article class="case-linked"><div class="case-color blue"></div><small>Git / YAML / CI/CD</small><h3>Configuration as Code</h3><p>Git-managed configuration for server access, DNS, and DHCP, with automation to detect drift and restore declared state.</p><a class="case-link" href="#configuration-case-study">Read case study</a></article>
           <article class="case-linked"><div class="case-color acid"></div><small>Grafana / AWS / Regional views</small><h3>Multi-Account Observability</h3><p>A consolidated view of infrastructure capacity, health, availability, and performance across AWS accounts and regions.</p><a class="case-link" href="#observability-case-study">Read case study</a></article>
@@ -45,13 +62,20 @@
         <div class="signal-bus"><span>Operating scope</span><b>Environment: 1,000+ servers</b><b>Migration delivery: 100+ hosts</b><b>Storage execution: 6–15× faster</b></div>
 
         <div class="case-study-list" aria-label="Project case studies">
-        <article class="flagship-case project-case" id="automation-case-study" aria-labelledby="automation-title">
+        <article class="flagship-case project-case" id="automation-case-study" aria-labelledby="automation-title" data-view-label="Storage automation case study">
           <div class="flagship-heading"><span>Case study / Storage automation</span><div><h3 id="automation-title">Hybrid Infrastructure Automation</h3><p class="case-summary">Automated storage expansion across VMware, Azure, and AWS through one repeatable operating pattern.</p></div></div>
           <div class="case-architecture" aria-label="Automation workflow: Git request to Bitbucket pipeline to automation engine to VMware, Azure, and AWS">
-            <div class="architecture-node"><small>01</small><b>Git request</b><span>reviewed change</span></div><i>→</i>
-            <div class="architecture-node"><small>02</small><b>Bitbucket</b><span>pipeline trigger</span></div><i>→</i>
-            <div class="architecture-node architecture-core"><small>03</small><b>Automation</b><span>Ansible / AWX / PowerShell</span></div><i>→</i>
-            <div class="architecture-targets"><span>VMware</span><span>Azure</span><span>AWS</span></div>
+            <div class="architecture-node"><small>01</small> <b>Git request</b> <span>reviewed change</span></div>
+            <i aria-hidden="true">→</i>
+            <div class="architecture-node"><small>02</small> <b>Bitbucket</b> <span>pipeline trigger</span></div>
+            <i aria-hidden="true">→</i>
+            <div class="architecture-node architecture-core"><small>03</small> <b>Automation</b> <span>Ansible / AWX / PowerShell</span></div>
+            <i aria-hidden="true">→</i>
+            <div class="architecture-targets">
+              <span>VMware</span>
+              <span>Azure</span>
+              <span>AWS</span>
+            </div>
           </div>
           <div class="case-narrative">
             <div><span>Problem</span><p>Routine storage expansion was a manual, platform-specific task across VMware, Azure, and AWS. A single server change regularly consumed more than 30 minutes, and repeating the process across multiple systems increased operational toil and the opportunity for inconsistent execution.</p></div>
@@ -61,9 +85,17 @@
           <div class="case-evidence"><span>Scope</span><b>VMware / Azure / AWS</b><p>Routine storage-expansion execution measured at 30+ minutes before automation and approximately 2–5 minutes afterward, per server.</p></div>
         </article>
 
-        <article class="flagship-case project-case" id="configuration-case-study" aria-labelledby="configuration-title">
+        <article class="flagship-case project-case" id="configuration-case-study" aria-labelledby="configuration-title" data-view-label="Configuration as Code case study">
           <div class="flagship-heading"><span>Case study / Declared state</span><div><h3 id="configuration-title">Configuration as Code</h3><p class="case-summary">Implemented Git-managed configuration for server access, DNS, and DHCP, with automated drift reconciliation.</p></div></div>
-          <div class="case-proof" aria-label="Configuration lifecycle"><span>Declared state</span><i>→</i><span>Git review</span><i>→</i><span>Automated execution</span><i>→</i><span>Drift reconciliation</span></div>
+          <div class="case-proof" aria-label="Configuration lifecycle">
+            <span>Declared state</span>
+            <i aria-hidden="true">→</i>
+            <span>Git review</span>
+            <i aria-hidden="true">→</i>
+            <span>Automated execution</span>
+            <i aria-hidden="true">→</i>
+            <span>Drift reconciliation</span>
+          </div>
           <div class="case-narrative">
             <div><span>Problem</span><p>Manual configuration changes made it difficult to establish the intended state of a system and keep that state consistent over time.</p></div>
             <div><span>Delivered</span><p>I moved supported configuration into version-controlled definitions and connected them to automated execution. Git became the source of truth, with reviewable history and comparison of live configuration against declared state.</p></div>
@@ -72,9 +104,14 @@
           <div class="case-evidence"><span>Scope</span><b>Access / DNS / DHCP</b><p>Git-managed definitions and the reconciliation lifecycle; production configuration remains omitted.</p></div>
         </article>
 
-        <article class="flagship-case project-case" id="observability-case-study" aria-labelledby="observability-title">
+        <article class="flagship-case project-case" id="observability-case-study" aria-labelledby="observability-title" data-view-label="Observability case study">
           <div class="flagship-heading"><span>Case study / Shared visibility</span><div><h3 id="observability-title">Multi-Account Observability</h3><p class="case-summary">Built consolidated Grafana views for infrastructure condition across AWS accounts and regions.</p></div></div>
-          <div class="case-proof" aria-label="Observed infrastructure signals"><span>Capacity</span><span>Health</span><span>Availability</span><span>Performance</span></div>
+          <div class="case-proof" aria-label="Observed infrastructure signals">
+            <span>Capacity</span>
+            <span>Health</span>
+            <span>Availability</span>
+            <span>Performance</span>
+          </div>
           <div class="case-narrative">
             <div><span>Problem</span><p>Operational information was spread across environments and monitoring views. Engineers had to gather context from multiple places before assessing an issue.</p></div>
             <div><span>Delivered</span><p>I brought infrastructure telemetry into shared Grafana dashboards and organized the signals needed to review resource health, capacity, availability, and performance across environments.</p></div>
@@ -83,9 +120,19 @@
           <div class="case-evidence"><span>Scope</span><b>AWS accounts / Regions / Grafana</b><p>Consolidated views across infrastructure capacity, health, availability, and performance.</p></div>
         </article>
 
-        <article class="flagship-case project-case" id="ai-case-study" aria-labelledby="ai-title">
+        <article class="flagship-case project-case" id="ai-case-study" aria-labelledby="ai-title" data-view-label="AI investigation case study">
           <div class="flagship-heading"><span>Case study / Guided investigation</span><div><h3 id="ai-title">AI-Assisted Incident Investigation</h3><p class="case-summary">Combines operational context to summarize incidents, generate hypotheses, and recommend investigation steps while keeping the response decision with the engineer.</p></div></div>
-          <div class="case-proof ai-proof" aria-label="AI-assisted investigation workflow"><span>Connected sources<small>Splunk / Grafana / Microsoft Graph / AWS</small></span><i>→</i><span>Incident summary</span><i>→</i><span>Hypotheses</span><i>→</i><span>Recommended checks</span><i>→</i><strong>Engineer decision</strong></div>
+          <div class="case-proof ai-proof" aria-label="AI-assisted investigation workflow">
+            <span>Connected sources <small>Splunk / Grafana / Microsoft Graph / AWS</small></span>
+            <i aria-hidden="true">→</i>
+            <span>Incident summary</span>
+            <i aria-hidden="true">→</i>
+            <span>Hypotheses</span>
+            <i aria-hidden="true">→</i>
+            <span>Recommended checks</span>
+            <i aria-hidden="true">→</i>
+            <strong>Engineer decision</strong>
+          </div>
           <div class="case-narrative">
             <div><span>Problem</span><p>Incident investigation required gathering information from separate systems before an engineer could assess the evidence and decide what to do next.</p></div>
             <div><span>Delivered</span><p>I built an AI-assisted investigation workflow that brings together operational context from Splunk, Grafana, Microsoft Graph, and AWS. It summarizes incidents, generates hypotheses about possible causes, and recommends investigation steps. Engineers review the available evidence, validate the hypotheses, and decide what action to take.</p></div>
@@ -96,14 +143,16 @@
         </div>
       </section>
 
-      <section class="method" id="method">
+      <section class="method" id="method" data-view-label="Operating principle">
         <p class="vertical">Operating principle</p>
         <blockquote>“The best infrastructure<br />doesn’t demand attention.<br /><em>It creates confidence.</em>”</blockquote>
         <div><p>My work connects infrastructure as code, configuration management, observability, identity, and recovery into systems that behave predictably.</p><ul><li>AWS</li><li>Azure</li><li>Terraform</li><li>Ansible / AWX</li><li>PowerShell</li><li>VMware</li></ul></div>
       </section>
 
-      <section class="contact" id="contact">
-        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2><div class="contact-links"><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a><a href="https://github.com/Arkforce" rel="me">GitHub</a></div>
+      <section class="contact" id="contact" data-view-label="Contact">
+        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2>
+        <p class="visit-insight"><span>Most viewed this visit</span><strong data-dwell-output>Exploring…</strong><small>Calculated in this tab and stored nowhere.</small></p>
+        <div class="contact-links"><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a> <a href="https://github.com/Arkforce" rel="me">GitHub</a></div>
       </section>
     </main>
     <footer><span>© <span id="year">2026</span></span><span>Aziz Khodzhaev</span><a href="#home">Back to top</a></footer>
