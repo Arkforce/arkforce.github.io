@@ -2,161 +2,546 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0d1117" />
-    <meta name="description" content="Aziz Khodzhaev — infrastructure and platform engineer making complex hybrid systems visible, automated, and reliable." />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f4ee" />
+    <meta
+      name="description"
+      content="Aziz Khodzhaev builds observable infrastructure, repeatable automation, and AI-assisted investigation workflows."
+    />
+    <title>Aziz Khodzhaev — Infrastructure, Platform &amp; AI</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="canonical" href="https://arkforce.github.io/" />
-    <title>Aziz Khodzhaev — Infrastructure, Made Visible</title>
-    <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="/production.css" />
-    <link rel="stylesheet" href="/case-study.css" />
-    <link rel="stylesheet" href="/instrumentation.css" />
-    <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
   </head>
-  <body class="production instrumentation">
-    <canvas id="terrain" aria-hidden="true"></canvas>
-    <header>
-      <a class="mark" href="#home">Aziz<br />Khodzhaev</a>
-      <p>Infrastructure &amp; platform engineering<br />Chicago, Illinois</p>
-      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#method">Method</a><a href="#contact">Contact</a></nav>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="./index.html" aria-label="Aziz Khodzhaev home"
+        ><span class="brand-symbol" aria-hidden="true">a/k</span
+        ><span>Aziz<br />Khodzhaev</span></a
+      >
+      <span class="header-note">INFRASTRUCTURE / PLATFORM / AI</span>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a><a href="#lab">Try the workflow</a
+        ><a class="nav-contact" href="#contact"
+          >Let’s talk <span aria-hidden="true">↗</span></a
+        >
+      </nav>
     </header>
-
-    <main>
-      <section class="hero" id="home" data-view-label="Introduction">
-        <div class="hero-title"><span>Infrastructure engineering</span><h1>made <em>observable.</em></h1></div>
-        <div class="hero-bottom"><p>I design and automate hybrid systems across cloud and on-premises—making operations observable, repeatable, and easier to trust.</p><div class="hero-actions"><a href="#work">View selected work</a><a href="https://github.com/Arkforce" rel="me">GitHub profile</a></div></div>
-        <aside class="session-console">
-          <div class="console-heading">
-            <span>Page explored</span>
-            <b id="walkthrough-value">0%</b>
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="status-dot" aria-hidden="true"></span> HYBRID CLOUD ·
+            PLATFORM ENGINEERING · AI
+          </p>
+          <h1 id="hero-title">
+            Infrastructure,<br />made<br /><em>observable.</em>
+          </h1>
+          <p class="hero-description">
+            I build automation, observability, and AI-assisted investigation
+            workflows across AWS, Azure, and on-premises infrastructure.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#work"
+              >Explore my work <span aria-hidden="true">↘</span></a
+            ><a class="text-link" href="https://github.com/Arkforce"
+              >GitHub <span aria-hidden="true">↗</span></a
+            >
           </div>
-          <canvas id="signal-trace" width="300" height="72" aria-label="Page exploration trace"></canvas>
-          <dl>
+          <p class="hero-location">
+            BASED IN CHICAGO · WORKING ACROSS CLOUD & ON-PREMISES
+          </p>
+        </div>
+        <div class="system-panel">
+          <div class="panel-top">
+            <span
+              ><span class="status-dot" aria-hidden="true"></span> FROM
+              RESOURCES TO SIGNALS</span
+            ><span>FIG. 01</span>
+          </div>
+          <div class="scene" id="scene">
+            <svg
+              class="scene-fallback"
+              viewBox="0 0 600 440"
+              role="img"
+              aria-label="Illustrative infrastructure topology linking cloud resources, automation, and telemetry"
+            >
+              <g fill="none" stroke="#448f75" stroke-width="1.5">
+                <path
+                  d="M90 300 300 190 510 300 300 410Z M90 190 300 80 510 190 300 300Z M90 190V300 M300 80V190 M510 190V300 M300 300V410 M195 135V245 M405 135V245 M195 245V355 M405 245V355"
+                />
+                <path d="m90 190 210 110 210-110M300 190v110" />
+              </g>
+              <g fill="#85deb0">
+                <circle cx="90" cy="190" r="7" />
+                <circle cx="300" cy="80" r="7" />
+                <circle cx="510" cy="190" r="7" />
+                <circle cx="300" cy="300" r="10" />
+                <circle cx="195" cy="245" r="7" />
+                <circle cx="405" cy="245" r="7" />
+              </g>
+            </svg>
+            <canvas id="topology" aria-hidden="true"></canvas>
+            <span class="scene-label label-cloud">01 / INFRASTRUCTURE</span
+            ><span class="scene-label label-automation">02 / AUTOMATION</span
+            ><span class="scene-label label-telemetry">03 / OBSERVABILITY</span>
+          </div>
+          <div class="scene-controls" aria-label="Explore system layers">
+            <button
+              type="button"
+              class="selected"
+              data-layer="0"
+              aria-pressed="true"
+            >
+              01 Infrastructure</button
+            ><button type="button" data-layer="1" aria-pressed="false">
+              02 Automation</button
+            ><button type="button" data-layer="2" aria-pressed="false">
+              03 Signals
+            </button>
+          </div>
+          <div class="panel-bottom">
+            <p id="layer-description">
+              Cloud and on-premises. One connected operating model.
+            </p>
+            <button
+              id="motion-toggle"
+              type="button"
+              aria-pressed="false"
+              hidden
+            >
+              Pause motion
+            </button>
+          </div>
+          <div class="reveal-status">
+            <span id="reveal-label">Scroll to reveal the connections</span
+            ><span class="reveal-track" aria-hidden="true"
+              ><span id="reveal-fill"></span
+            ></span>
+          </div>
+          <span class="illustration-note"
+            >Illustrative topology · Select a layer to inspect it.</span
+          >
+        </div>
+      </section>
+      <section class="outcomes wrap" aria-label="Experience and outcomes">
+        <div>
+          <strong>1,000<span>+</span></strong>
+          <p>servers in the enterprise<br />environment I support</p>
+        </div>
+        <div>
+          <strong>100<span>+</span></strong>
+          <p>hosts migrated from<br />on-premises to cloud</p>
+        </div>
+        <div>
+          <strong>30 → 2–5<span> min</span></strong>
+          <p>routine storage expansion<br />execution per server</p>
+        </div>
+      </section>
+      <section class="work-section wrap" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 / SELECTED WORK</p>
+            <h2 id="work-title">Less friction.<br /><em>More control.</em></h2>
+          </div>
+          <p>
+            Four systems that connect the work:<br />provision, operate,
+            observe, investigate.
+          </p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="card-top">
+              <span>01 / PLATFORM & IDENTITY</span
+              ><span class="tag">Repository available</span>
+            </div>
+            <div
+              class="artifact code-artifact"
+              aria-label="Illustrative role request"
+            >
+              <div class="file-label">
+                <span class="file-dot"></span> role-request.yaml
+              </div>
+              <pre><span class="code-muted">name:</span> claims-app-readonly
+<span class="code-muted">trust:</span> ec2
+<span class="code-muted">permissions:</span>
+  - <span class="code-green">claims-bucket-read-only</span>
+<span class="code-muted">owner:</span> claims-platform</pre>
+              <div class="artifact-caption">
+                <span>DECLARATIVE INPUT</span><span aria-hidden="true">→</span
+                ><span>REVIEWABLE IAM</span>
+              </div>
+            </div>
+            <div class="card-body">
+              <h3>
+                <a href="./case-iam.html"
+                  >AWS IAM Role Factory <span aria-hidden="true">↗</span></a
+                >
+              </h3>
+              <p>
+                Reviewed YAML requests and shared policy catalogs become
+                consistent AWS roles. Identity delivered through a repeatable
+                interface.
+              </p>
+              <div class="card-footer">
+                <span>TERRAFORM · YAML · IAM · OIDC</span
+                ><a
+                  href="./case-iam.html"
+                  aria-label="Read AWS IAM Role Factory case study"
+                  >Explore system <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <span>02 / HYBRID AUTOMATION</span
+              ><span class="tag">Enterprise work</span>
+            </div>
+            <div class="artifact timing-artifact">
+              <div class="timing-row">
+                <span>MANUAL</span>
+                <div class="timing-bar manual"></div>
+                <b>30+ min</b>
+              </div>
+              <div class="timing-row">
+                <span>AUTOMATED</span>
+                <div class="timing-bar automated"></div>
+                <b>2–5 min</b>
+              </div>
+              <p>Same operation. A different operating model.</p>
+              <span class="artifact-footnote"
+                >REPORTED ROUTINE EXECUTION / PER SERVER</span
+              >
+            </div>
+            <div class="card-body">
+              <h3>
+                <a href="./case-automation.html"
+                  >Hybrid Infrastructure Automation
+                  <span aria-hidden="true">↗</span></a
+                >
+              </h3>
+              <p>
+                One workflow for storage expansion across VMware, Azure, and
+                AWS. Fewer repetitive steps. Consistent execution.
+              </p>
+              <div class="card-footer">
+                <span>ANSIBLE / AWX · POWERSHELL · CI/CD</span
+                ><a
+                  href="./case-automation.html"
+                  aria-label="Read Hybrid Infrastructure Automation case study"
+                  >Explore system <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <span>03 / OBSERVABILITY</span
+              ><span class="tag">Enterprise work</span>
+            </div>
+            <div class="artifact telemetry-artifact">
+              <div class="signal-row">
+                <span>CAPACITY</span
+                ><svg viewBox="0 0 220 30" aria-hidden="true">
+                  <path
+                    d="M0 24 25 24 35 18 60 18 85 15 110 15 125 10 160 10 185 5 220 5"
+                  /></svg
+                ><span class="signal-end">↗</span>
+              </div>
+              <div class="signal-row">
+                <span>HEALTH</span
+                ><svg viewBox="0 0 220 30" aria-hidden="true">
+                  <path
+                    d="M0 16 65 16 75 5 85 26 95 16 160 16 170 8 180 20 190 16 220 16"
+                  /></svg
+                ><span class="signal-end">∿</span>
+              </div>
+              <div class="signal-row">
+                <span>AVAILABILITY</span
+                ><svg viewBox="0 0 220 30" aria-hidden="true">
+                  <path d="M0 12 85 12 85 23 115 23 115 12 220 12" /></svg
+                ><span class="signal-end">—</span>
+              </div>
+              <span class="artifact-footnote"
+                >ILLUSTRATIVE SIGNALS · NOT LIVE TELEMETRY</span
+              >
+            </div>
+            <div class="card-body">
+              <h3>
+                <a href="./case-observability.html"
+                  >Multi-Account Observability
+                  <span aria-hidden="true">↗</span></a
+                >
+              </h3>
+              <p>
+                A common view of Amazon FSx capacity, health, and performance
+                across AWS accounts and regions.
+              </p>
+              <div class="card-footer">
+                <span>GRAFANA · AWS · CLOUDWATCH</span
+                ><a
+                  href="./case-observability.html"
+                  aria-label="Read Multi-Account Observability case study"
+                  >Explore system <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="card-top">
+              <span>04 / AI-ASSISTED OPERATIONS</span
+              ><span class="tag">Engineer reviewed</span>
+            </div>
+            <div class="artifact investigation-artifact">
+              <div class="investigation-step">
+                <span>01</span>
+                <p>Gather operational context</p>
+                <span aria-hidden="true">↘</span>
+              </div>
+              <div class="investigation-step">
+                <span>02</span>
+                <p>Summarize. Form hypotheses.</p>
+                <span aria-hidden="true">↘</span>
+              </div>
+              <div class="investigation-step decision">
+                <span>03</span>
+                <p>Engineer validates & decides</p>
+                <span aria-hidden="true">✓</span>
+              </div>
+              <span class="artifact-footnote"
+                >A GUIDED WORKFLOW · HUMAN DECISION</span
+              >
+            </div>
+            <div class="card-body">
+              <h3>
+                <a href="./case-ai.html"
+                  >AI-Assisted Incident Investigation
+                  <span aria-hidden="true">↗</span></a
+                >
+              </h3>
+              <p>
+                Connects Splunk, Grafana, Microsoft Graph, and AWS context to
+                summaries, hypotheses, and recommended checks.
+              </p>
+              <div class="card-footer">
+                <span>AI · SPLUNK · GRAFANA · GRAPH · AWS</span
+                ><a
+                  href="./case-ai.html"
+                  aria-label="Read AI-Assisted Incident Investigation case study"
+                  >Explore system <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="lab-section" id="lab" aria-labelledby="lab-title">
+        <div class="wrap">
+          <div class="section-heading">
             <div>
-              <dt>Graphics</dt>
-              <dd id="webgl-health" aria-live="polite">loading</dd>
+              <p class="eyebrow">02 / TRY THE IAM WORKFLOW</p>
+              <h2 id="lab-title">
+                Request access.<br /><em>Inspect the policy.</em>
+              </h2>
             </div>
-          </dl>
-          <div class="dwell-fact">
-            <span>Most viewed this visit</span>
-            <b data-dwell-output>Exploring…</b>
+            <p>
+              Choose a service and permission profile.<br />See what is
+              accepted, and why.
+            </p>
           </div>
-          <small>Scroll to bring the infrastructure field into focus.</small>
-        </aside>
-      </section>
-
-      <section class="numbers" data-view-label="Results at a glance">
-        <div><span>Enterprise scale</span><b>1,000+</b><p>servers across enterprise hybrid infrastructure</p></div>
-        <div><span>Cloud migration</span><b>100+</b><p>hosts moved from on-premises into cloud environments</p></div>
-        <div><span>Storage execution</span><b>6–15×</b><p>faster routine storage expansion per server</p></div>
-      </section>
-
-      <section class="work" id="work">
-        <div class="work-heading"><span>Selected systems</span><h2>Four ways to<br /><em>remove friction.</em></h2></div>
-        <div class="case-grid" data-view-label="Selected systems">
-          <article class="case-linked"><div class="case-color coral"></div><small>AWS / Azure / VMware</small><h3>Hybrid Infrastructure Automation</h3><p>Automated storage expansion across three platforms, reducing routine execution from 30+ minutes to approximately 2–5 minutes per server.</p><a class="case-link" href="#automation-case-study">Read case study</a></article>
-          <article class="case-linked"><div class="case-color blue"></div><small>Git / YAML / CI/CD</small><h3>Configuration as Code</h3><p>Git-managed configuration for server access, DNS, and DHCP, with automation to detect drift and restore declared state.</p><a class="case-link" href="#configuration-case-study">Read case study</a></article>
-          <article class="case-linked"><div class="case-color acid"></div><small>Grafana / AWS / Regional views</small><h3>Multi-Account Observability</h3><p>A consolidated view of infrastructure capacity, health, availability, and performance across AWS accounts and regions.</p><a class="case-link" href="#observability-case-study">Read case study</a></article>
-          <article class="case-linked"><div class="case-color violet"></div><small>AI / Splunk / Grafana / Microsoft Graph / AWS</small><h3>AI-Assisted Incident Investigation</h3><p>Combines context from Splunk, Grafana, Microsoft Graph, and AWS to summarize incidents, generate hypotheses, and recommend investigation steps for engineer review.</p><a class="case-link" href="#ai-case-study">Read case study</a></article>
-        </div>
-        <div class="signal-bus"><span>Operating scope</span><b>Environment: 1,000+ servers</b><b>Migration delivery: 100+ hosts</b><b>Storage execution: 6–15× faster</b></div>
-
-        <div class="case-study-list" aria-label="Project case studies">
-        <article class="flagship-case project-case" id="automation-case-study" aria-labelledby="automation-title" data-view-label="Storage automation case study">
-          <div class="flagship-heading"><span>Case study / Storage automation</span><div><h3 id="automation-title">Hybrid Infrastructure Automation</h3><p class="case-summary">Automated storage expansion across VMware, Azure, and AWS through one repeatable operating pattern.</p></div></div>
-          <div class="case-architecture" aria-label="Automation workflow: Git request to Bitbucket pipeline to automation engine to VMware, Azure, and AWS">
-            <div class="architecture-node"><small>01</small> <b>Git request</b> <span>reviewed change</span></div>
-            <i aria-hidden="true">→</i>
-            <div class="architecture-node"><small>02</small> <b>Bitbucket</b> <span>pipeline trigger</span></div>
-            <i aria-hidden="true">→</i>
-            <div class="architecture-node architecture-core"><small>03</small> <b>Automation</b> <span>Ansible / AWX / PowerShell</span></div>
-            <i aria-hidden="true">→</i>
-            <div class="architecture-targets">
-              <span>VMware</span>
-              <span>Azure</span>
-              <span>AWS</span>
+          <div class="demo-shell">
+            <form id="request-form" class="demo-input">
+              <noscript
+                ><p class="demo-note">
+                  Enable JavaScript to use this local demo, or
+                  <a href="./case-iam.html">read the IAM case study</a>.
+                </p></noscript
+              >
+              <div class="demo-heading">
+                <span>01 / ROLE REQUEST</span><span>LOCAL DEMO</span>
+              </div>
+              <div
+                class="demo-presets"
+                role="group"
+                aria-label="Example requests"
+              >
+                <button type="button" data-preset="allowed">
+                  Try read-only access</button
+                ><button type="button" data-preset="blocked">
+                  Try restricted access
+                </button>
+              </div>
+              <label for="role-name">Role name</label
+              ><input
+                id="role-name"
+                name="role"
+                value="claims-app-readonly"
+                required
+                maxlength="64"
+                pattern="[a-zA-Z0-9_+=,.@-]+"
+                autocomplete="off"
+              />
+              <div class="form-pair">
+                <div>
+                  <label for="trust">Trusted service</label
+                  ><select id="trust" name="trust">
+                    <option value="ec2">EC2</option>
+                    <option value="lambda">Lambda</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="permission">Permission profile</label
+                  ><select id="permission" name="permission">
+                    <option value="claims-bucket-read-only">
+                      Bucket read only
+                    </option>
+                    <option value="claims-bucket-read-write">
+                      Bucket read / write / delete
+                    </option>
+                    <option value="administrator">
+                      Administrator — test rejection
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <pre
+                id="yaml-preview"
+                class="request-preview"
+                aria-label="Generated YAML request"
+              ></pre>
+              <button
+                class="button primary"
+                id="validate-button"
+                type="submit"
+                disabled
+              >
+                Validate request <span aria-hidden="true">→</span>
+              </button>
+              <p class="demo-note">
+                Browser-only illustration with a limited sample catalog. No
+                credentials, network requests, or AWS resources.
+              </p>
+            </form>
+            <div class="demo-output">
+              <div class="demo-heading">
+                <span>02 / DECISION & OUTPUT</span
+                ><span class="output-state" id="output-state">READY</span>
+              </div>
+              <p id="validation-message" role="status" aria-live="polite">
+                Validate the request to inspect its trust policy and proposed
+                changes.
+              </p>
+              <div
+                class="output-tabs"
+                role="group"
+                aria-label="Choose generated output"
+              >
+                <button
+                  type="button"
+                  data-output="policy"
+                  class="selected"
+                  aria-pressed="true"
+                >
+                  Trust policy</button
+                ><button
+                  type="button"
+                  data-output="permissions"
+                  aria-pressed="false"
+                >
+                  Permissions</button
+                ><button type="button" data-output="plan" aria-pressed="false">
+                  Plan summary
+                </button>
+              </div>
+              <div class="output-tools">
+                <span>GENERATED EXAMPLE</span
+                ><button type="button" id="copy-output" disabled>
+                  Copy output
+                </button>
+              </div>
+              <pre
+                id="generated-output"
+                tabindex="0"
+                aria-label="Generated output"
+              >
+// Your reviewed output appears here.</pre
+              >
+              <p id="copy-message" class="copy-message" role="status"></p>
+              <div class="approval-note">
+                <span aria-hidden="true">◇</span> Validation is a checkpoint.
+                Deployment still needs review.
+              </div>
             </div>
           </div>
-          <div class="case-narrative">
-            <div><span>Problem</span><p>Routine storage expansion was a manual, platform-specific task across VMware, Azure, and AWS. A single server change regularly consumed more than 30 minutes, and repeating the process across multiple systems increased operational toil and the opportunity for inconsistent execution.</p></div>
-            <div><span>Delivered</span><p>I built reusable workflows using Ansible/AWX, PowerShell, and pipeline-driven execution. Engineers supplied target systems and change parameters, and the automation ran the appropriate platform-specific workflow for individual or multi-server changes.</p></div>
-            <div class="result"><span>Result</span><p>Routine execution dropped from <strong>30+ minutes</strong> to approximately <strong>2–5 minutes per server</strong>—a 6–15× improvement with substantially less repeated manual effort.</p></div>
-          </div>
-          <div class="case-evidence"><span>Scope</span><b>VMware / Azure / AWS</b><p>Routine storage-expansion execution measured at 30+ minutes before automation and approximately 2–5 minutes afterward, per server.</p></div>
-        </article>
-
-        <article class="flagship-case project-case" id="configuration-case-study" aria-labelledby="configuration-title" data-view-label="Configuration as Code case study">
-          <div class="flagship-heading"><span>Case study / Declared state</span><div><h3 id="configuration-title">Configuration as Code</h3><p class="case-summary">Implemented Git-managed configuration for server access, DNS, and DHCP, with automated drift reconciliation.</p></div></div>
-          <div class="case-proof" aria-label="Configuration lifecycle">
-            <span>Declared state</span>
-            <i aria-hidden="true">→</i>
-            <span>Git review</span>
-            <i aria-hidden="true">→</i>
-            <span>Automated execution</span>
-            <i aria-hidden="true">→</i>
-            <span>Drift reconciliation</span>
-          </div>
-          <div class="case-narrative">
-            <div><span>Problem</span><p>Manual configuration changes made it difficult to establish the intended state of a system and keep that state consistent over time.</p></div>
-            <div><span>Delivered</span><p>I moved supported configuration into version-controlled definitions and connected them to automated execution. Git became the source of truth, with reviewable history and comparison of live configuration against declared state.</p></div>
-            <div class="result"><span>Result</span><p>Supported configuration became repeatable and traceable. Engineers could inspect intended state, review changes, and reconcile drift through a consistent workflow.</p></div>
-          </div>
-          <div class="case-evidence"><span>Scope</span><b>Access / DNS / DHCP</b><p>Git-managed definitions and the reconciliation lifecycle; production configuration remains omitted.</p></div>
-        </article>
-
-        <article class="flagship-case project-case" id="observability-case-study" aria-labelledby="observability-title" data-view-label="Observability case study">
-          <div class="flagship-heading"><span>Case study / Shared visibility</span><div><h3 id="observability-title">Multi-Account Observability</h3><p class="case-summary">Built consolidated Grafana views for infrastructure condition across AWS accounts and regions.</p></div></div>
-          <div class="case-proof" aria-label="Observed infrastructure signals">
-            <span>Capacity</span>
-            <span>Health</span>
-            <span>Availability</span>
-            <span>Performance</span>
-          </div>
-          <div class="case-narrative">
-            <div><span>Problem</span><p>Operational information was spread across environments and monitoring views. Engineers had to gather context from multiple places before assessing an issue.</p></div>
-            <div><span>Delivered</span><p>I brought infrastructure telemetry into shared Grafana dashboards and organized the signals needed to review resource health, capacity, availability, and performance across environments.</p></div>
-            <div class="result"><span>Result</span><p>Engineers gained a common starting point for operational checks and a more consistent way to assess monitored infrastructure across accounts and regions.</p></div>
-          </div>
-          <div class="case-evidence"><span>Scope</span><b>AWS accounts / Regions / Grafana</b><p>Consolidated views across infrastructure capacity, health, availability, and performance.</p></div>
-        </article>
-
-        <article class="flagship-case project-case" id="ai-case-study" aria-labelledby="ai-title" data-view-label="AI investigation case study">
-          <div class="flagship-heading"><span>Case study / Guided investigation</span><div><h3 id="ai-title">AI-Assisted Incident Investigation</h3><p class="case-summary">Combines operational context to summarize incidents, generate hypotheses, and recommend investigation steps while keeping the response decision with the engineer.</p></div></div>
-          <div class="case-proof ai-proof" aria-label="AI-assisted investigation workflow">
-            <span>Connected sources <small>Splunk / Grafana / Microsoft Graph / AWS</small></span>
-            <i aria-hidden="true">→</i>
-            <span>Incident summary</span>
-            <i aria-hidden="true">→</i>
-            <span>Hypotheses</span>
-            <i aria-hidden="true">→</i>
-            <span>Recommended checks</span>
-            <i aria-hidden="true">→</i>
-            <strong>Engineer decision</strong>
-          </div>
-          <div class="case-narrative">
-            <div><span>Problem</span><p>Incident investigation required gathering information from separate systems before an engineer could assess the evidence and decide what to do next.</p></div>
-            <div><span>Delivered</span><p>I built an AI-assisted investigation workflow that brings together operational context from Splunk, Grafana, Microsoft Graph, and AWS. It summarizes incidents, generates hypotheses about possible causes, and recommends investigation steps. Engineers review the available evidence, validate the hypotheses, and decide what action to take.</p></div>
-            <div class="result"><span>Result</span><p>The workflow provides a shared starting point for investigation. The engineer remains responsible for interpreting the evidence and choosing the operational response.</p></div>
-          </div>
-          <div class="case-evidence"><span>Scope</span><b>Context → Analysis → Engineer review</b><p>Incident summaries, possible-cause hypotheses, and recommended investigation steps.</p></div>
-        </article>
         </div>
       </section>
-
-      <section class="method" id="method" data-view-label="Operating principle">
-        <p class="vertical">Operating principle</p>
-        <blockquote>“The best infrastructure<br />doesn’t demand attention.<br /><em>It creates confidence.</em>”</blockquote>
-        <div><p>My work connects infrastructure as code, configuration management, observability, identity, and recovery into systems that behave predictably.</p><ul><li>AWS</li><li>Azure</li><li>Terraform</li><li>Ansible / AWX</li><li>PowerShell</li><li>VMware</li></ul></div>
+      <section
+        class="practice wrap"
+        id="practice"
+        aria-labelledby="practice-title"
+      >
+        <div>
+          <p class="eyebrow">03 / THE OPERATING MODEL</p>
+          <h2 id="practice-title">
+            Built to run.<br /><em>Built to recover.</em>
+          </h2>
+          <p>
+            My work spans the full lifecycle, from a reviewed change to the
+            health check after recovery.
+          </p>
+        </div>
+        <div class="practice-list">
+          <div>
+            <span>01</span>
+            <h3>Declare & automate</h3>
+            <p>
+              Terraform, Git-managed configuration, Ansible/AWX, PowerShell, and
+              Packer templates.
+            </p>
+          </div>
+          <div>
+            <span>02</span>
+            <h3>Observe & investigate</h3>
+            <p>
+              Grafana, Splunk, CloudWatch, and AI-assisted context gathering
+              with engineer review.
+            </p>
+          </div>
+          <div>
+            <span>03</span>
+            <h3>Recover & validate</h3>
+            <p>
+              Zerto and Azure Site Recovery exercises, failover/failback checks,
+              and RTO/RPO validation.
+            </p>
+          </div>
+        </div>
       </section>
-
-      <section class="contact" id="contact" data-view-label="Contact">
-        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2>
-        <p class="visit-insight"><span>Most viewed this visit</span><strong data-dwell-output>Exploring…</strong><small>Calculated in this tab and stored nowhere.</small></p>
-        <div class="contact-links"><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a> <a href="https://github.com/Arkforce" rel="me">GitHub</a></div>
+      <section class="contact-section wrap" id="contact">
+        <p class="eyebrow">HAVE A SYSTEM THAT NEEDS CLARITY?</p>
+        <div class="contact-heading">
+          <h2>Let’s make<br /><em>it work.</em></h2>
+          <a
+            class="contact-arrow"
+            href="mailto:khodzhaev@gmail.com"
+            aria-label="Email Aziz"
+            >↗</a
+          >
+        </div>
+        <div class="contact-bottom">
+          <a class="email-link" href="mailto:khodzhaev@gmail.com"
+            >khodzhaev@gmail.com</a
+          ><span>Infrastructure · Platform · AI-assisted operations</span
+          ><a class="text-link" href="https://github.com/Arkforce">GitHub ↗</a>
+        </div>
       </section>
     </main>
-    <footer><span>© <span id="year">2026</span></span><span>Aziz Khodzhaev</span><a href="#home">Back to top</a></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-    <script type="module" src="/src/main.js"></script>
+    <footer class="wrap">
+      <span>© <span data-year>2026</span> Aziz Khodzhaev</span
+      ><span>Chicago, Illinois</span><a href="#main">Back to top ↑</a>
+    </footer>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f4ee" />
+    <meta
+      name="description"
+      content="A repeatable interface between an access request and an AWS identity. Shared catalogs define the available trust and permission profiles."
+    />
+    <title>AWS IAM Role Factory — Aziz Khodzhaev</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="canonical" href="https://arkforce.github.io/case-iam.html" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="./index.html" aria-label="Aziz Khodzhaev home"
+        ><span class="brand-symbol" aria-hidden="true">a/k</span
+        ><span>Aziz<br />Khodzhaev</span></a
+      ><span class="header-note">INFRASTRUCTURE / PLATFORM / AI</span>
+      <nav aria-label="Main navigation">
+        <a href="./index.html#work">Work</a
+        ><a href="./index.html#lab">Try the workflow</a
+        ><a class="nav-contact" href="mailto:khodzhaev@gmail.com"
+          >Let’s talk ↗</a
+        >
+      </nav>
+    </header>
+    <main id="main" class="detail-main wrap">
+      <a class="back-link" href="./index.html#work">← ALL SELECTED WORK</a>
+      <div class="detail-hero">
+        <div>
+          <p class="eyebrow">01 / PLATFORM &amp; IDENTITY</p>
+          <h1>AWS IAM Role Factory</h1>
+        </div>
+        <p>
+          A repeatable interface between an access request and an AWS identity.
+          Shared catalogs define the available trust and permission profiles.
+        </p>
+      </div>
+      <div class="detail-meta">
+        <span>TERRAFORM / YAML / AWS IAM</span> <span>PERSONAL PROJECT</span>
+        <span>CODE AVAILABLE</span>
+      </div>
+      <ol class="detail-flow" aria-label="System workflow">
+        <li>YAML request</li>
+        <li>Catalog validation</li>
+        <li>Generated policies</li>
+        <li>Terraform review</li>
+      </ol>
+      <div class="detail-content">
+        <div class="detail-copy">
+          <section>
+            <h2>The problem</h2>
+            <p>
+              Creating IAM roles individually makes trust relationships,
+              permission attachments, and ownership metadata harder to keep
+              consistent. A reviewed request should carry enough context to
+              generate a predictable result.
+            </p>
+          </section>
+          <section>
+            <h2>What I built</h2>
+            <p>
+              A Terraform factory that reads YAML requests and centrally managed
+              trust and permission catalogs. It creates IAM roles, policy
+              attachments, customer-managed policies, EC2 instance profiles
+              where appropriate, and ownership tags. Requests are scoped to the
+              account associated with the active AWS credentials.
+            </p>
+          </section>
+          <section>
+            <h2>The architecture decision</h2>
+            <p>
+              Keep the request interface small and put policy construction in
+              shared catalogs. Requesters select approved profile names; the
+              factory validates account formats, duplicate targets, ownership,
+              change tickets, profile references, and session duration.
+            </p>
+          </section>
+          <section>
+            <h2>Boundaries that matter</h2>
+            <p>
+              This repository creates IAM resources only. Saved plans must not
+              be reused after switching AWS credentials or accounts. The
+              repository documents lab-specific provider workarounds that need
+              reassessment before production use.
+            </p>
+          </section>
+          <section>
+            <h2>The result</h2>
+            <p>
+              One reviewable pattern for role delivery, with redacted examples
+              for service trust, Bitbucket OIDC, and Grafana Cloud. The preview
+              demo illustrates a small part of the request-to-output experience.
+            </p>
+          </section>
+        </div>
+        <aside class="detail-artifact">
+          <h2>SANITIZED REQUEST EXAMPLE</h2>
+          <pre>
+name: claims-app-readonly
+accounts:
+  - &quot;&lt;AWS_ACCOUNT_ID&gt;&quot;
+owner: claims-platform
+costCenter: CC-EXAMPLE
+changeTicket: EXAMPLE-001
+trust: ec2
+permissions:
+  - claims-bucket-read-only</pre
+          >
+          <p>
+            Sanitized example from the IAM Role Factory. Account-specific values
+            stay outside the public repository.
+          </p>
+          <a
+            class="button primary"
+            href="https://github.com/Arkforce/aws-iam-role-factory"
+            >Inspect the repository ↗</a
+          >
+          <div class="source-links">
+            <h3>Inspect the source</h3>
+            <a
+              href="https://github.com/Arkforce/aws-iam-role-factory/blob/main/examples/requests/claims-app-readonly.yaml.example"
+              >Request example ↗</a
+            ><a
+              href="https://github.com/Arkforce/aws-iam-role-factory/blob/main/catalog/trust/aws-services.yaml"
+              >Service trust catalog ↗</a
+            ><a
+              href="https://github.com/Arkforce/aws-iam-role-factory/tree/main/examples/bitbucket-oidc"
+              >Bitbucket OIDC example ↗</a
+            >
+          </div>
+          <p>
+            <a class="text-link" href="./index.html#lab"
+              >Try a role request →</a
+            >
+          </p>
+        </aside>
+      </div>
+      <div class="detail-next">
+        <a href="./index.html#work">← All selected work</a
+        ><a href="./case-automation.html"
+          >Next: Hybrid Infrastructure Automation →</a
+        >
+      </div>
+    </main>
+    <footer class="wrap">
+      <span>© <span data-year>2026</span> Aziz Khodzhaev</span
+      ><span>Chicago, Illinois</span
+      ><a href="mailto:khodzhaev@gmail.com">Get in touch ↗</a>
+    </footer>
+    <script type="module" src="./shared.js"></script>
+  </body>
+</html>

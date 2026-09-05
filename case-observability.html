@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f4f4ee" />
+    <meta
+      name="description"
+      content="A consolidated operational view of Amazon FSx across AWS accounts and regions, built around the questions engineers need to answer."
+    />
+    <title>Multi-Account Observability — Aziz Khodzhaev</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="canonical"
+      href="https://arkforce.github.io/case-observability.html"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header wrap">
+      <a class="brand" href="./index.html" aria-label="Aziz Khodzhaev home"
+        ><span class="brand-symbol" aria-hidden="true">a/k</span
+        ><span>Aziz<br />Khodzhaev</span></a
+      ><span class="header-note">INFRASTRUCTURE / PLATFORM / AI</span>
+      <nav aria-label="Main navigation">
+        <a href="./index.html#work">Work</a
+        ><a href="./index.html#lab">Try the workflow</a
+        ><a class="nav-contact" href="mailto:khodzhaev@gmail.com"
+          >Let’s talk ↗</a
+        >
+      </nav>
+    </header>
+    <main id="main" class="detail-main wrap">
+      <a class="back-link" href="./index.html#work">← ALL SELECTED WORK</a>
+      <div class="detail-hero">
+        <div>
+          <p class="eyebrow">03 / OBSERVABILITY</p>
+          <h1>Multi-Account Observability</h1>
+        </div>
+        <p>
+          A consolidated operational view of Amazon FSx across AWS accounts and
+          regions, built around the questions engineers need to answer.
+        </p>
+      </div>
+      <div class="detail-meta">
+        <span>AWS / GRAFANA / CLOUDWATCH</span> <span>ENTERPRISE WORK</span>
+        <span>CAPACITY / HEALTH / PERFORMANCE</span>
+      </div>
+      <ol class="detail-flow" aria-label="System workflow">
+        <li>AWS resources</li>
+        <li>Telemetry</li>
+        <li>Grafana views</li>
+        <li>Operational checks</li>
+      </ol>
+      <div class="detail-content">
+        <div class="detail-copy">
+          <section>
+            <h2>The problem</h2>
+            <p>
+              Infrastructure signals were distributed across environments and
+              monitoring views. Engineers needed to assemble context from
+              several places before assessing resource condition.
+            </p>
+          </section>
+          <section>
+            <h2>What I built</h2>
+            <p>
+              Centralized FSx monitoring across AWS accounts and regions, with
+              Grafana views for capacity, health, availability, and performance.
+              The dashboards create a common starting point for infrastructure
+              checks.
+            </p>
+          </section>
+          <section>
+            <h2>The architecture decision</h2>
+            <p>
+              Organize the experience around operational questions instead of
+              individual consoles: where is capacity constrained, which
+              resources need attention, and how does behavior compare across
+              environments?
+            </p>
+          </section>
+          <section>
+            <h2>The result</h2>
+            <p>
+              Engineers gained a shared view of monitored infrastructure and a
+              consistent starting point for operational checks across accounts
+              and regions.
+            </p>
+          </section>
+        </div>
+        <aside class="detail-artifact">
+          <h2>MONITORING SCOPE</h2>
+          <pre>
+Resource family   Amazon FSx
+Dimensions        AWS account / region
+Views             Capacity
+                  Health
+                  Availability
+                  Performance</pre
+          >
+          <p>Monitoring scope across AWS accounts and regions.</p>
+          <a class="button primary" href="mailto:khodzhaev@gmail.com"
+            >Discuss observability ↗</a
+          >
+        </aside>
+      </div>
+      <div class="detail-next">
+        <a href="./index.html#work">← All selected work</a
+        ><a href="./case-ai.html">Next: AI-Assisted Incident Investigation →</a>
+      </div>
+    </main>
+    <footer class="wrap">
+      <span>© <span data-year>2026</span> Aziz Khodzhaev</span
+      ><span>Chicago, Illinois</span
+      ><a href="mailto:khodzhaev@gmail.com">Get in touch ↗</a>
+    </footer>
+    <script type="module" src="./shared.js"></script>
+  </body>
+</html>
