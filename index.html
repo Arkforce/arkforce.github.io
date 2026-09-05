@@ -18,14 +18,14 @@
     <header>
       <a class="mark" href="#home">Aziz<br />Khodzhaev</a>
       <p>Infrastructure &amp; platform engineering<br />Chicago, Illinois</p>
-      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#method">Method</a><a href="mailto:khodzhaev@gmail.com">Email</a></nav>
+      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#method">Method</a><a href="#contact">Contact</a></nav>
     </header>
 
     <main>
       <section class="hero" id="home">
         <div class="hero-title"><span>Infrastructure engineering</span><h1>made <em>observable.</em></h1></div>
-        <div class="hero-bottom"><p>I design and automate hybrid systems across cloud and on-premises—making operations observable, repeatable, and easier to trust.</p><a href="#work">View selected work</a></div>
-        <aside class="session-console"><div class="console-heading"><span>Session integrity</span><b id="field-value">72.4%</b></div><canvas id="signal-trace" width="300" height="72" aria-label="Live session integrity trace"></canvas><dl><div><dt>Assets</dt><dd id="asset-health">checking</dd></div><div><dt>WebGL</dt><dd id="webgl-health">active</dd></div><div><dt>Walkthrough</dt><dd id="walkthrough-health">0%</dd></div></dl><small>Live browser session: stylesheet availability, WebGL render, and page walkthrough.</small></aside>
+        <div class="hero-bottom"><p>I design and automate hybrid systems across cloud and on-premises—making operations observable, repeatable, and easier to trust.</p><div class="hero-actions"><a href="#work">View selected work</a><a href="https://github.com/Arkforce" rel="me">GitHub profile</a></div></div>
+        <aside class="session-console"><div class="console-heading"><span>Page explored</span><b id="walkthrough-value">0%</b></div><canvas id="signal-trace" width="300" height="72" aria-label="Page exploration trace"></canvas><dl><div><dt>Graphics</dt><dd id="webgl-health" aria-live="polite">checking</dd></div></dl><small>Scroll progress only. The Three.js visual is an optional enhancement.</small></aside>
       </section>
 
       <section class="numbers">
@@ -37,13 +37,13 @@
       <section class="work" id="work">
         <div class="work-heading"><span>Selected systems</span><h2>Four ways to<br /><em>remove friction.</em></h2></div>
         <div class="case-grid">
-          <article><div class="case-color coral"></div><small>AWS / Azure / VMware</small><h3>Hybrid Infrastructure Automation</h3><p>Reusable provisioning and lifecycle workflows that turn slow, manual changes into safe multi-server execution.</p></article>
+          <article class="case-linked"><div class="case-color coral"></div><small>AWS / Azure / VMware</small><h3>Hybrid Infrastructure Automation</h3><p>Reusable provisioning and lifecycle workflows that turn slow, manual changes into safe multi-server execution.</p><a class="case-link" href="#automation-case-study">Read case study</a></article>
           <article><div class="case-color blue"></div><small>Git / YAML / CI/CD</small><h3>Configuration as Code</h3><p>Reviewed desired state for access, DNS, and DHCP with automation that detects and corrects drift.</p></article>
           <article><div class="case-color acid"></div><small>Grafana / OpenTelemetry / AWS</small><h3>Multi-Account Observability</h3><p>A consolidated view of capacity, health, availability, and performance across regions and accounts.</p></article>
-          <article><div class="case-color violet"></div><small>AI/LLM / Jira / Telemetry</small><h3>AI-Orchestrated Investigation</h3><p>Assembles alerts, operational context, and runbooks into a guided root-cause workflow—built and running against live Jira and telemetry data.</p></article>
+          <article><div class="case-color violet"></div><small>AI/LLM / Jira / Telemetry</small><h3>AI-Orchestrated Investigation</h3><p>Takes live Jira incidents, alerts, telemetry, and runbooks into one guided investigation view; the engineer reviews the evidence and decides what action to take.</p></article>
         </div>
-        <div class="signal-bus"><span>Verified outcomes</span><b>1,000+ servers</b><b>100+ migrations</b><b>6–15× faster execution</b></div>
-        <article class="flagship-case" aria-labelledby="flagship-title">
+        <div class="signal-bus"><span>Operating scope</span><b>Environment: 1,000+ servers</b><b>Migration delivery: 100+ hosts</b><b>Routine execution: 6–15× faster</b></div>
+        <article class="flagship-case" id="automation-case-study" aria-labelledby="flagship-title">
           <div class="flagship-heading"><span>Flagship case study</span><h3 id="flagship-title">From repetitive change<br />to <em>repeatable automation.</em></h3></div>
           <div class="case-architecture" aria-label="Automation workflow: Git request to Bitbucket pipeline to automation engine to VMware, Azure, and AWS">
             <div class="architecture-node"><small>01</small><b>Git request</b><span>reviewed change</span></div><i>→</i>
@@ -65,12 +65,12 @@
         <div><p>My work connects infrastructure as code, configuration management, observability, identity, and recovery into systems that behave predictably.</p><ul><li>AWS</li><li>Azure</li><li>Terraform</li><li>Ansible / AWX</li><li>PowerShell</li><li>VMware</li></ul></div>
       </section>
 
-      <section class="contact">
-        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a>
+      <section class="contact" id="contact">
+        <span>Have a system that needs clarity?</span><h2>Let’s make<br />it <em>work.</em></h2><div class="contact-links"><a href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a><a href="https://github.com/Arkforce" rel="me">GitHub</a></div>
       </section>
     </main>
     <footer><span>© <span id="year">2026</span></span><span>Aziz Khodzhaev</span><a href="#home">Back to top</a></footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear(); setTimeout(() => { const status = document.getElementById('webgl-health'); if (status?.textContent === 'checking') status.textContent = 'unavailable'; }, 3000);</script>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

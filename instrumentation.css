@@ -61,7 +61,7 @@ body.instrumentation {
 
 .instrumentation header p {
   color: var(--muted);
-  font-size: 0.61rem;
+  font-size: 0.72rem;
 }
 
 .instrumentation nav {
@@ -75,18 +75,23 @@ body.instrumentation {
   padding: 0 0.75rem;
   border-color: var(--line);
   color: var(--muted);
-  font-size: 0.57rem;
+  font-size: 0.78rem;
   text-transform: none;
 }
 
 .instrumentation nav a:hover,
-.instrumentation nav a.active {
+.instrumentation nav a.active,
+.instrumentation nav a[aria-current='true'] {
   background: rgba(63, 185, 80, 0.12);
   color: var(--green);
 }
 
 .instrumentation .hero {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 320px);
+  grid-template-rows: 1fr auto;
+  column-gap: 4vw;
   min-height: 100vh;
   padding: 132px 4vw 6vh;
   background-image:
@@ -96,6 +101,9 @@ body.instrumentation {
 }
 
 .instrumentation .hero-title {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
   max-width: 1050px;
 }
 
@@ -124,6 +132,8 @@ body.instrumentation {
 }
 
 .instrumentation .hero-bottom {
+  grid-column: 1;
+  grid-row: 2;
   align-items: flex-end;
 }
 
@@ -139,16 +149,24 @@ body.instrumentation {
   padding: 0.7rem 0;
   border-bottom: 1px solid var(--green);
   color: var(--text);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0;
   text-transform: none;
 }
 
+.instrumentation .hero-actions,
+.instrumentation .contact-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .instrumentation .session-console {
-  position: absolute;
-  top: 27%;
-  right: 4vw;
-  width: min(320px, 30vw);
+  position: static;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 100%;
   padding: 1rem;
   border: 1px solid var(--line);
   background: rgba(22, 27, 34, 0.9);
@@ -166,7 +184,7 @@ body.instrumentation {
 
 .instrumentation .console-heading span {
   color: var(--muted);
-  font-size: 0.6rem;
+  font-size: 0.72rem;
 }
 
 .instrumentation .console-heading b {
@@ -186,7 +204,7 @@ body.instrumentation {
 
 .instrumentation .session-console dl {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   margin: 0;
 }
 
@@ -198,20 +216,20 @@ body.instrumentation {
 .instrumentation .session-console dt {
   margin-bottom: 0.25rem;
   color: var(--muted);
-  font-size: 0.48rem;
+  font-size: 0.68rem;
 }
 
 .instrumentation .session-console dd {
   margin: 0;
   color: var(--green);
-  font-size: 0.57rem;
+  font-size: 0.72rem;
 }
 
 .instrumentation .session-console > small {
   display: block;
   margin-top: 0.9rem;
   color: var(--muted);
-  font-size: 0.49rem;
+  font-size: 0.68rem;
   line-height: 1.55;
 }
 
@@ -228,7 +246,7 @@ body.instrumentation {
 
 .instrumentation .numbers span {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -255,7 +273,7 @@ body.instrumentation {
 
 .instrumentation .work-heading > span {
   color: var(--green);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -295,7 +313,7 @@ body.instrumentation {
   transition: border-color 180ms ease, transform 180ms ease;
 }
 
-.instrumentation .case-grid article:hover {
+.instrumentation .case-grid article.case-linked:hover {
   z-index: 1;
   border-color: var(--green);
   transform: translateY(-3px);
@@ -335,7 +353,7 @@ body.instrumentation {
 .instrumentation .case-grid small {
   min-height: 2.7em;
   color: var(--muted);
-  font-size: 0.54rem;
+  font-size: 0.68rem;
   line-height: 1.4;
   letter-spacing: 0;
   text-transform: none;
@@ -355,6 +373,16 @@ body.instrumentation {
   line-height: 1.65;
 }
 
+.instrumentation .case-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-bottom: 1px solid var(--green);
+  color: var(--green);
+  font: 500 0.72rem 'JetBrains Mono', monospace;
+}
+
 .instrumentation .signal-bus {
   display: flex;
   align-items: center;
@@ -364,7 +392,7 @@ body.instrumentation {
   border: 1px solid var(--line);
   background: rgba(63, 185, 80, 0.055);
   color: var(--muted);
-  font-size: 0.55rem;
+  font-size: 0.68rem;
 }
 
 .instrumentation .signal-bus span {
@@ -387,7 +415,7 @@ body.instrumentation {
 .instrumentation .flagship-heading > span,
 .instrumentation .case-narrative > div > span {
   color: var(--green);
-  font-size: 0.57rem;
+  font-size: 0.68rem;
   letter-spacing: 0;
 }
 
@@ -443,7 +471,7 @@ body.instrumentation {
 
 .instrumentation .vertical {
   color: var(--green);
-  font-size: 0.58rem;
+  font-size: 0.68rem;
   letter-spacing: 0;
 }
 
@@ -459,7 +487,7 @@ body.instrumentation {
 .instrumentation .method li {
   border-color: var(--line);
   color: var(--text);
-  font-size: 0.62rem;
+  font-size: 0.7rem;
 }
 
 .instrumentation .contact {
@@ -469,7 +497,7 @@ body.instrumentation {
 
 .instrumentation .contact > span {
   color: var(--muted);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -484,7 +512,7 @@ body.instrumentation {
   border: 1px solid var(--green);
   background: rgba(63, 185, 80, 0.08);
   color: var(--green);
-  font-size: 0.63rem;
+  font-size: 0.72rem;
   letter-spacing: 0;
 }
 
@@ -497,12 +525,35 @@ body.instrumentation {
   color: var(--green);
 }
 
+.instrumentation #work,
+.instrumentation #method,
+.instrumentation #contact,
+.instrumentation #automation-case-study {
+  scroll-margin-top: 88px;
+}
+
 @media (max-width: 1050px) {
+  .instrumentation .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 2rem;
+  }
+
+  .instrumentation .hero-title {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .instrumentation .hero-bottom {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
   .instrumentation .session-console {
-    top: auto;
-    right: 4vw;
-    bottom: 5vh;
-    width: min(310px, 39vw);
+    grid-column: 1;
+    grid-row: 3;
+    width: min(100%, 420px);
+    justify-self: end;
   }
 
   .instrumentation .hero-bottom p {
@@ -533,8 +584,9 @@ body.instrumentation {
   }
 
   .instrumentation .hero {
-    min-height: 920px;
-    padding: 110px 6vw 5vh;
+    min-height: 100svh;
+    padding: 100px 6vw 3rem;
+    gap: 1.6rem;
   }
 
   .instrumentation .hero-title > span {
@@ -548,7 +600,7 @@ body.instrumentation {
 
   .instrumentation .hero-bottom {
     display: block;
-    margin-bottom: 245px;
+    margin-bottom: 0;
   }
 
   .instrumentation .hero-bottom p {
@@ -557,14 +609,40 @@ body.instrumentation {
   }
 
   .instrumentation .session-console {
-    right: 6vw;
-    bottom: 4vh;
     display: block;
-    width: 88vw;
+    width: 100%;
+  }
+
+  .instrumentation .numbers {
+    display: block;
+    min-height: 0;
   }
 
   .instrumentation .numbers > div {
-    min-height: 260px;
+    display: grid;
+    grid-template-columns: minmax(110px, 0.65fr) 1fr;
+    grid-template-rows: auto auto;
+    min-height: 0;
+    padding: 1.4rem 6vw;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .instrumentation .numbers b {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+  }
+
+  .instrumentation .numbers span,
+  .instrumentation .numbers p {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  .instrumentation .numbers p {
+    margin-top: 0.35rem;
   }
 
   .instrumentation .work {
@@ -609,5 +687,9 @@ body.instrumentation {
 @media (prefers-reduced-motion: reduce) {
   .instrumentation .case-grid article {
     transition: none;
+  }
+
+  .instrumentation .case-grid article.case-linked:hover {
+    transform: none;
   }
 }
