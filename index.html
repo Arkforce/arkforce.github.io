@@ -1,547 +1,99 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f4f4ee" />
-    <meta
-      name="description"
-      content="Aziz Khodzhaev builds observable infrastructure, repeatable automation, and AI-assisted investigation workflows."
-    />
-    <title>Aziz Khodzhaev — Infrastructure, Platform &amp; AI</title>
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="canonical" href="https://arkforce.github.io/" />
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header wrap">
-      <a class="brand" href="./index.html" aria-label="Aziz Khodzhaev home"
-        ><span class="brand-symbol" aria-hidden="true">AK</span
-        ><span>Aziz<br />Khodzhaev</span></a
-      >
-      <span class="header-note">INFRASTRUCTURE / PLATFORM / AI</span>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a><a href="#lab">Try the workflow</a
-        ><a class="nav-contact" href="#contact"
-          >Let’s talk <span aria-hidden="true">↗</span></a
-        >
-      </nav>
-    </header>
-    <main id="main">
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">
-            <span class="status-dot" aria-hidden="true"></span> HYBRID CLOUD ·
-            PLATFORM ENGINEERING · AI
-          </p>
-          <h1 id="hero-title">
-            Infrastructure,<br />made<br /><em>observable.</em>
-          </h1>
-          <p class="hero-description">
-            I build automation, observability, and AI-assisted investigation
-            workflows across AWS, Azure, and on-premises infrastructure.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#work"
-              >Explore my work <span aria-hidden="true">↘</span></a
-            ><a class="text-link" href="https://github.com/Arkforce"
-              >GitHub <span aria-hidden="true">↗</span></a
-            >
-          </div>
-          <p class="hero-location">
-            BASED IN CHICAGO · WORKING ACROSS CLOUD & ON-PREMISES
-          </p>
-        </div>
-        <div class="system-panel">
-          <div class="panel-top">
-            <span
-              ><span class="status-dot" aria-hidden="true"></span> FROM
-              RESOURCES TO SIGNALS</span
-            ><span>FIG. 01</span>
-          </div>
-          <div class="scene" id="scene">
-            <svg
-              class="scene-fallback"
-              viewBox="0 0 600 440"
-              role="img"
-              aria-label="Illustrative infrastructure topology linking cloud resources, automation, and telemetry"
-            >
-              <g fill="none" stroke="#448f75" stroke-width="1.5">
-                <path
-                  d="M90 300 300 190 510 300 300 410Z M90 190 300 80 510 190 300 300Z M90 190V300 M300 80V190 M510 190V300 M300 300V410 M195 135V245 M405 135V245 M195 245V355 M405 245V355"
-                />
-                <path d="m90 190 210 110 210-110M300 190v110" />
-              </g>
-              <g fill="#85deb0">
-                <circle cx="90" cy="190" r="7" />
-                <circle cx="300" cy="80" r="7" />
-                <circle cx="510" cy="190" r="7" />
-                <circle cx="300" cy="300" r="10" />
-                <circle cx="195" cy="245" r="7" />
-                <circle cx="405" cy="245" r="7" />
-              </g>
-            </svg>
-            <canvas id="topology" aria-hidden="true"></canvas>
-            <span class="scene-label label-cloud">01 / INFRASTRUCTURE</span
-            ><span class="scene-label label-automation">02 / AUTOMATION</span
-            ><span class="scene-label label-telemetry">03 / OBSERVABILITY</span>
-          </div>
-          <div class="scene-controls" aria-label="Explore system layers">
-            <button
-              type="button"
-              class="selected"
-              data-layer="0"
-              aria-pressed="true"
-            >
-              01 Infrastructure</button
-            ><button type="button" data-layer="1" aria-pressed="false">
-              02 Automation</button
-            ><button type="button" data-layer="2" aria-pressed="false">
-              03 Signals
-            </button>
-          </div>
-          <div class="panel-bottom">
-            <p id="layer-description">
-              Cloud and on-premises. One connected operating model.
-            </p>
-            <button
-              id="motion-toggle"
-              type="button"
-              aria-pressed="false"
-              hidden
-            >
-              Pause motion
-            </button>
-          </div>
-          <div class="reveal-status">
-            <span id="reveal-label">Scroll to reveal the connections</span
-            ><span class="reveal-track" aria-hidden="true"
-              ><span id="reveal-fill"></span
-            ></span>
-          </div>
-          <span class="illustration-note"
-            >Illustrative topology · Select a layer to inspect it.</span
-          >
-        </div>
-      </section>
-      <section class="outcomes wrap" aria-label="Experience and outcomes">
-        <div>
-          <strong>1,000<span>+</span></strong>
-          <p>servers in the enterprise<br />environment I support</p>
-        </div>
-        <div>
-          <strong>100<span>+</span></strong>
-          <p>hosts migrated from<br />on-premises to cloud</p>
-        </div>
-        <div>
-          <strong>30 → 2–5<span> min</span></strong>
-          <p>routine storage expansion<br />execution per server</p>
-        </div>
-      </section>
-      <section class="work-section wrap" id="work" aria-labelledby="work-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 / SELECTED WORK</p>
-            <h2 id="work-title">Less friction.<br /><em>More control.</em></h2>
-          </div>
-          <p>
-            Four systems that connect the work:<br />provision, operate,
-            observe, investigate.
-          </p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card featured">
-            <div class="card-top">
-              <span>01 / PLATFORM & IDENTITY</span
-              ><span class="tag">Repository available</span>
-            </div>
-            <div
-              class="artifact code-artifact"
-              aria-label="Illustrative role request"
-            >
-              <div class="file-label">
-                <span class="file-dot"></span> role-request.yaml
-              </div>
-              <pre><span class="code-muted">name:</span> claims-app-readonly
-<span class="code-muted">trust:</span> ec2
-<span class="code-muted">permissions:</span>
-  - <span class="code-green">claims-bucket-read-only</span>
-<span class="code-muted">owner:</span> claims-platform</pre>
-              <div class="artifact-caption">
-                <span>DECLARATIVE INPUT</span><span aria-hidden="true">→</span
-                ><span>REVIEWABLE IAM</span>
-              </div>
-            </div>
-            <div class="card-body">
-              <h3>
-                <a href="./case-iam.html"
-                  >AWS IAM Role Factory <span aria-hidden="true">↗</span></a
-                >
-              </h3>
-              <p>
-                Reviewed YAML requests and shared policy catalogs become
-                consistent AWS roles. Identity delivered through a repeatable
-                interface.
-              </p>
-              <div class="card-footer">
-                <span>TERRAFORM · YAML · IAM · OIDC</span
-                ><a
-                  href="./case-iam.html"
-                  aria-label="Read AWS IAM Role Factory case study"
-                  >Explore system <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="card-top">
-              <span>02 / HYBRID AUTOMATION</span
-              ><span class="tag">Enterprise work</span>
-            </div>
-            <div class="artifact timing-artifact">
-              <div class="timing-row">
-                <span>MANUAL</span>
-                <div class="timing-bar manual"></div>
-                <b>30+ min</b>
-              </div>
-              <div class="timing-row">
-                <span>AUTOMATED</span>
-                <div class="timing-bar automated"></div>
-                <b>2–5 min</b>
-              </div>
-              <p>Same operation. A different operating model.</p>
-              <span class="artifact-footnote"
-                >REPORTED ROUTINE EXECUTION / PER SERVER</span
-              >
-            </div>
-            <div class="card-body">
-              <h3>
-                <a href="./case-automation.html"
-                  >Hybrid Infrastructure Automation
-                  <span aria-hidden="true">↗</span></a
-                >
-              </h3>
-              <p>
-                One workflow for storage expansion across VMware, Azure, and
-                AWS. Fewer repetitive steps. Consistent execution.
-              </p>
-              <div class="card-footer">
-                <span>ANSIBLE / AWX · POWERSHELL · CI/CD</span
-                ><a
-                  href="./case-automation.html"
-                  aria-label="Read Hybrid Infrastructure Automation case study"
-                  >Explore system <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="card-top">
-              <span>03 / OBSERVABILITY</span
-              ><span class="tag">Enterprise work</span>
-            </div>
-            <div class="artifact telemetry-artifact">
-              <div class="signal-row">
-                <span>CAPACITY</span
-                ><svg viewBox="0 0 220 30" aria-hidden="true">
-                  <path
-                    d="M0 24 25 24 35 18 60 18 85 15 110 15 125 10 160 10 185 5 220 5"
-                  /></svg
-                ><span class="signal-end">↗</span>
-              </div>
-              <div class="signal-row">
-                <span>HEALTH</span
-                ><svg viewBox="0 0 220 30" aria-hidden="true">
-                  <path
-                    d="M0 16 65 16 75 5 85 26 95 16 160 16 170 8 180 20 190 16 220 16"
-                  /></svg
-                ><span class="signal-end">∿</span>
-              </div>
-              <div class="signal-row">
-                <span>AVAILABILITY</span
-                ><svg viewBox="0 0 220 30" aria-hidden="true">
-                  <path d="M0 12 85 12 85 23 115 23 115 12 220 12" /></svg
-                ><span class="signal-end">—</span>
-              </div>
-              <span class="artifact-footnote"
-                >ILLUSTRATIVE SIGNALS · NOT LIVE TELEMETRY</span
-              >
-            </div>
-            <div class="card-body">
-              <h3>
-                <a href="./case-observability.html"
-                  >Multi-Account Observability
-                  <span aria-hidden="true">↗</span></a
-                >
-              </h3>
-              <p>
-                A common view of Amazon FSx capacity, health, and performance
-                across AWS accounts and regions.
-              </p>
-              <div class="card-footer">
-                <span>GRAFANA · AWS · CLOUDWATCH</span
-                ><a
-                  href="./case-observability.html"
-                  aria-label="Read Multi-Account Observability case study"
-                  >Explore system <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="card-top">
-              <span>04 / AI-ASSISTED OPERATIONS</span
-              ><span class="tag">Engineer reviewed</span>
-            </div>
-            <div class="artifact investigation-artifact">
-              <div class="investigation-step">
-                <span>01</span>
-                <p>Gather operational context</p>
-                <span aria-hidden="true">↘</span>
-              </div>
-              <div class="investigation-step">
-                <span>02</span>
-                <p>Summarize. Form hypotheses.</p>
-                <span aria-hidden="true">↘</span>
-              </div>
-              <div class="investigation-step decision">
-                <span>03</span>
-                <p>Engineer validates & decides</p>
-                <span aria-hidden="true">✓</span>
-              </div>
-              <span class="artifact-footnote"
-                >A GUIDED WORKFLOW · HUMAN DECISION</span
-              >
-            </div>
-            <div class="card-body">
-              <h3>
-                <a href="./case-ai.html"
-                  >AI-Assisted Incident Investigation
-                  <span aria-hidden="true">↗</span></a
-                >
-              </h3>
-              <p>
-                Connects Splunk, Grafana, Microsoft Graph, and AWS context to
-                summaries, hypotheses, and recommended checks.
-              </p>
-              <div class="card-footer">
-                <span>AI · SPLUNK · GRAFANA · GRAPH · AWS</span
-                ><a
-                  href="./case-ai.html"
-                  aria-label="Read AI-Assisted Incident Investigation case study"
-                  >Explore system <span aria-hidden="true">↗</span></a
-                >
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-      <section class="lab-section" id="lab" aria-labelledby="lab-title">
-        <div class="wrap">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">02 / TRY THE IAM WORKFLOW</p>
-              <h2 id="lab-title">
-                Request access.<br /><em>Inspect the policy.</em>
-              </h2>
-            </div>
-            <p>
-              Choose a service and permission profile.<br />See what is
-              accepted, and why.
-            </p>
-          </div>
-          <div class="demo-shell">
-            <form id="request-form" class="demo-input">
-              <noscript
-                ><p class="demo-note">
-                  Enable JavaScript to use this local demo, or
-                  <a href="./case-iam.html">read the IAM case study</a>.
-                </p></noscript
-              >
-              <div class="demo-heading">
-                <span>01 / ROLE REQUEST</span><span>LOCAL DEMO</span>
-              </div>
-              <div
-                class="demo-presets"
-                role="group"
-                aria-label="Example requests"
-              >
-                <button type="button" data-preset="allowed">
-                  Try read-only access</button
-                ><button type="button" data-preset="blocked">
-                  Try restricted access
-                </button>
-              </div>
-              <label for="role-name">Role name</label
-              ><input
-                id="role-name"
-                name="role"
-                value="claims-app-readonly"
-                required
-                maxlength="64"
-                pattern="[a-zA-Z0-9_+=,.@-]+"
-                autocomplete="off"
-              />
-              <div class="form-pair">
-                <div>
-                  <label for="trust">Trusted service</label
-                  ><select id="trust" name="trust">
-                    <option value="ec2">EC2</option>
-                    <option value="lambda">Lambda</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="permission">Permission profile</label
-                  ><select id="permission" name="permission">
-                    <option value="claims-bucket-read-only">
-                      Bucket read only
-                    </option>
-                    <option value="claims-bucket-read-write">
-                      Bucket read / write / delete
-                    </option>
-                    <option value="administrator">
-                      Administrator — test rejection
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <pre
-                id="yaml-preview"
-                class="request-preview"
-                aria-label="Generated YAML request"
-              ></pre>
-              <button
-                class="button primary"
-                id="validate-button"
-                type="submit"
-                disabled
-              >
-                Validate request <span aria-hidden="true">→</span>
-              </button>
-              <p class="demo-note">
-                Browser-only illustration with a limited sample catalog. No
-                credentials, network requests, or AWS resources.
-              </p>
-            </form>
-            <div class="demo-output">
-              <div class="demo-heading">
-                <span>02 / DECISION & OUTPUT</span
-                ><span class="output-state" id="output-state">READY</span>
-              </div>
-              <p id="validation-message" role="status" aria-live="polite">
-                Validate the request to inspect its trust policy and proposed
-                changes.
-              </p>
-              <div
-                class="output-tabs"
-                role="group"
-                aria-label="Choose generated output"
-              >
-                <button
-                  type="button"
-                  data-output="policy"
-                  class="selected"
-                  aria-pressed="true"
-                >
-                  Trust policy</button
-                ><button
-                  type="button"
-                  data-output="permissions"
-                  aria-pressed="false"
-                >
-                  Permissions</button
-                ><button type="button" data-output="plan" aria-pressed="false">
-                  Plan summary
-                </button>
-              </div>
-              <div class="output-tools">
-                <span>GENERATED EXAMPLE</span
-                ><button type="button" id="copy-output" disabled>
-                  Copy output
-                </button>
-              </div>
-              <pre
-                id="generated-output"
-                tabindex="0"
-                aria-label="Generated output"
-              >
-// Your reviewed output appears here.</pre
-              >
-              <p id="copy-message" class="copy-message" role="status"></p>
-              <div class="approval-note">
-                <span aria-hidden="true">◇</span> Validation is a checkpoint.
-                Deployment still needs review.
-              </div>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ededeb" />
+  <meta name="description" content="Explore Aziz Khodzhaev's work in hybrid infrastructure, platform automation, observability, and AI-assisted investigation. Inspect the architecture and try a working IAM request demo." />
+  <title>Aziz Khodzhaev | Infrastructure, Platform &amp; AI</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://arkforce.github.io/" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="./index.html" aria-label="Aziz Khodzhaev home"><span class="brand-symbol" aria-hidden="true">AK</span><span>Aziz Khodzhaev</span></a>
+    <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#lab">Try the workflow</a><a class="nav-contact" href="#contact">Let’s talk <span data-icon="arrow-up-right" aria-hidden="true"></span></a></nav>
+  </header>
+  <main id="main">
+    <section class="atlas-hero wrap" aria-labelledby="hero-title">
+      <div class="atlas-intro">
+        <h1 id="hero-title">Infrastructure.<br /><span>Made observable.</span></h1>
+        <p class="hero-description">I connect infrastructure, automation, and AI to make complex systems easier to operate.</p>
+        <a class="text-link hero-action" href="#work">Explore my work <span data-icon="arrow-right" aria-hidden="true"></span></a>
+        <div class="route-index">
+          <p class="route-index-title">Choose a route through my work</p>
+          <div class="route-list" role="group" aria-label="Choose a project route">
+            <button type="button" data-route="iam" aria-pressed="true" aria-controls="route-detail" disabled><span class="route-mark" aria-hidden="true">I</span><span>Identity &amp; access<small>AWS IAM Role Factory</small></span><span data-icon="arrow-right" aria-hidden="true"></span></button>
+            <button type="button" data-route="automation" aria-pressed="false" aria-controls="route-detail" disabled><span class="route-mark" aria-hidden="true">A</span><span>Hybrid automation<small>One request. Multiple platforms.</small></span><span data-icon="arrow-right" aria-hidden="true"></span></button>
+            <button type="button" data-route="observability" aria-pressed="false" aria-controls="route-detail" disabled><span class="route-mark" aria-hidden="true">O</span><span>Observability<small>Signals across accounts &amp; regions</small></span><span data-icon="arrow-right" aria-hidden="true"></span></button>
+            <button type="button" data-route="ai" aria-pressed="false" aria-controls="route-detail" disabled><span class="route-mark" aria-hidden="true">AI</span><span>AI investigation<small>Context to an engineer’s decision</small></span><span data-icon="arrow-right" aria-hidden="true"></span></button>
           </div>
         </div>
-      </section>
-      <section
-        class="practice wrap"
-        id="practice"
-        aria-labelledby="practice-title"
-      >
-        <div>
-          <p class="eyebrow">03 / THE OPERATING MODEL</p>
-          <h2 id="practice-title">
-            Built to run.<br /><em>Built to recover.</em>
-          </h2>
-          <p>
-            My work spans the full lifecycle, from a reviewed change to the
-            health check after recovery.
-          </p>
+      </div>
+      <div class="atlas-surface">
+        <div class="atlas-toolbar"><span>Systems atlas</span><div class="view-controls" role="group" aria-label="Map view"><button type="button" id="view-toggle" aria-pressed="false" disabled><span data-icon="map-trifold" aria-hidden="true"></span><span>Plan view</span></button><button type="button" id="motion-toggle" aria-pressed="false" disabled><span data-icon="play" aria-hidden="true"></span><span>Play flow</span></button></div></div>
+        <div class="atlas-map" id="atlas-map" role="group" aria-label="Illustrative project workflow map">
+          <svg class="atlas-fallback" viewBox="0 0 800 500" role="img" aria-labelledby="fallback-title fallback-desc">
+            <title id="fallback-title">Four routes through infrastructure engineering</title><desc id="fallback-desc">Identity: request, catalog, policies, review. Automation: request, pipeline, workflow, platform. Observability: resources, telemetry, Grafana, checks. AI: sources, summary, hypotheses, engineer.</desc>
+            <g fill="none" stroke="currentColor" stroke-width="3" opacity=".25"><path d="M100 175H270L425 215H685"/><path d="M100 285H270L425 325H685"/><path d="M100 395H270L425 435H685"/></g>
+            <path d="M100 65H270L425 105H685" fill="none" stroke="#6a802e" stroke-width="5"/>
+            <g fill="var(--surface)" stroke="currentColor" stroke-width="3"><circle cx="100" cy="65" r="10"/><circle cx="270" cy="65" r="10"/><circle cx="425" cy="105" r="10"/><circle cx="685" cy="105" r="10"/><circle cx="100" cy="175" r="8"/><circle cx="270" cy="175" r="8"/><circle cx="425" cy="215" r="8"/><circle cx="685" cy="215" r="8"/><circle cx="100" cy="285" r="8"/><circle cx="270" cy="285" r="8"/><circle cx="425" cy="325" r="8"/><circle cx="685" cy="325" r="8"/><circle cx="100" cy="395" r="8"/><circle cx="270" cy="395" r="8"/><circle cx="425" cy="435" r="8"/><circle cx="685" cy="435" r="8"/></g>
+            <g fill="currentColor" font-size="17" text-anchor="middle"><text x="100" y="40">Request</text><text x="270" y="40">Catalog</text><text x="425" y="80">Policies</text><text x="685" y="80">Review</text><text x="100" y="155">Automation</text><text x="100" y="265">Observability</text><text x="100" y="375">AI investigation</text></g>
+          </svg>
+          <canvas id="topology" aria-hidden="true"></canvas><div class="map-labels" id="map-labels" aria-hidden="true"></div><span class="map-orientation">Project workflows / schematic</span>
         </div>
-        <div class="practice-list">
-          <div>
-            <span>01</span>
-            <h3>Declare & automate</h3>
-            <p>
-              Terraform, Git-managed configuration, Ansible/AWX, PowerShell, and
-              Packer templates.
-            </p>
-          </div>
-          <div>
-            <span>02</span>
-            <h3>Observe & investigate</h3>
-            <p>
-              Grafana, Splunk, CloudWatch, and AI-assisted context gathering
-              with engineer review.
-            </p>
-          </div>
-          <div>
-            <span>03</span>
-            <h3>Recover & validate</h3>
-            <p>
-              Zerto and Azure Site Recovery exercises, failover/failback checks,
-              and RTO/RPO validation.
-            </p>
-          </div>
+        <div class="route-detail" id="route-detail" aria-live="polite" aria-atomic="true">
+          <div class="route-detail-heading"><span class="route-mark" id="route-code" aria-hidden="true">I</span><div><span id="route-category">Identity &amp; access</span><h2 id="route-title">AWS IAM Role Factory</h2></div><a id="route-link" class="route-open" href="./case-iam.html" aria-label="Read AWS IAM Role Factory case study"><span data-icon="arrow-up-right" aria-hidden="true"></span><span class="sr-only">Read case study</span></a></div>
+          <p id="route-description">A small request interface. Shared trust and permission catalogs. Reviewable infrastructure changes.</p>
+          <ol class="route-stages" id="route-stages"><li>YAML request</li><li>Catalog validation</li><li>Generated policies</li><li>Terraform review</li></ol>
         </div>
-      </section>
-      <section class="contact-section wrap" id="contact">
-        <p class="eyebrow">HAVE A SYSTEM THAT NEEDS CLARITY?</p>
-        <div class="contact-heading">
-          <h2>Let’s make<br /><em>it work.</em></h2>
-          <a
-            class="contact-arrow"
-            href="mailto:khodzhaev@gmail.com"
-            aria-label="Email Aziz"
-            >↗</a
-          >
-        </div>
-        <div class="contact-bottom">
-          <a class="email-link" href="mailto:khodzhaev@gmail.com"
-            >khodzhaev@gmail.com</a
-          ><span>Infrastructure · Platform · AI-assisted operations</span
-          ><a class="text-link" href="https://github.com/Arkforce">GitHub ↗</a>
-        </div>
-      </section>
-    </main>
-    <footer class="wrap">
-      <span>© <span data-year>2026</span> Aziz Khodzhaev</span
-      ><span>Chicago, Illinois</span><a href="#main">Back to top ↑</a>
-    </footer>
-    <script type="module" src="./main.js"></script>
-  </body>
+        <p class="atlas-caption" id="atlas-caption">Illustrative workflows, not a live environment. Every route opens a real project.</p>
+      </div>
+    </section>
+    <section class="experience-strip wrap" aria-label="Experience and scope"><p>Across cloud and on-premises.</p><p>Experience supporting <strong>1,000+ servers</strong>, migrating <strong>100+ hosts</strong>, and turning repeated operations into reviewed workflows.</p></section>
+    <section class="work-section wrap" id="work" aria-labelledby="work-title">
+      <div class="section-heading"><h2 id="work-title">Follow the architecture.<br /><span>Inspect the decisions.</span></h2><p>Four projects, from infrastructure delivery to incident investigation.</p></div>
+      <article class="featured-project">
+        <div class="featured-copy"><span class="project-kind">Personal project / source available</span><h3><a href="./case-iam.html">AWS IAM<br />Role Factory</a></h3><p>Turn account-scoped YAML requests into IAM roles, trust policies, and permission attachments through shared catalogs.</p><p class="decision"><strong>The decision:</strong> keep requests small. Put the guardrails in the catalog.</p><div class="project-actions"><a class="button primary" href="./case-iam.html">Read case study <span data-icon="arrow-right" aria-hidden="true"></span></a><a class="text-link" href="https://github.com/Arkforce/aws-iam-role-factory">Source code <span data-icon="arrow-up-right" aria-hidden="true"></span></a></div></div>
+        <div class="request-artifact"><div class="artifact-heading"><span>One request, explicit intent</span><span class="route-mark" aria-hidden="true">I</span></div><pre aria-label="Sanitized IAM request example"><code><span class="code-key">name:</span> claims-app-readonly
+<span class="code-key">accounts:</span>
+  - "&lt;AWS_ACCOUNT_ID&gt;"
+<span class="code-key">owner:</span> claims-platform
+<span class="code-key">trust:</span> ec2
+<span class="code-key">permissions:</span>
+  - claims-bucket-read-only</code></pre><div class="artifact-bottom"><span>Sanitized example</span><a href="#lab">Try the workflow <span data-icon="arrow-right" aria-hidden="true"></span></a></div></div>
+      </article>
+      <div class="project-ledger">
+        <article class="project-row"><span class="route-mark" aria-hidden="true">A</span><div class="project-row-title"><span class="project-kind">Enterprise work</span><h3><a href="./case-automation.html">Hybrid Infrastructure Automation</a></h3><p>Ansible / AWX / PowerShell</p></div><div class="project-row-detail"><p>One parameterized execution pattern across VMware, Azure, and AWS.</p><p class="execution-result"><span><del>30+ min</del><small>Manual execution</small></span><span data-icon="arrow-right" aria-hidden="true"></span><span><strong>2-5 min</strong><small>Automated / per server</small></span></p><small class="measurement-note">Reported routine storage expansion; excludes approvals.</small></div><a class="row-link" href="./case-automation.html" aria-label="Read Hybrid Infrastructure Automation case study"><span data-icon="arrow-up-right" aria-hidden="true"></span></a></article>
+        <article class="project-row"><span class="route-mark" aria-hidden="true">O</span><div class="project-row-title"><span class="project-kind">Enterprise work</span><h3><a href="./case-observability.html">Multi-Account Observability</a></h3><p>Grafana / CloudWatch / AWS</p></div><div class="project-row-detail"><p>One operational view of Amazon FSx across accounts and regions, organized around the questions engineers ask.</p><ul class="scope-list" aria-label="Monitoring scope"><li>Capacity</li><li>Health</li><li>Availability</li><li>Performance</li></ul></div><a class="row-link" href="./case-observability.html" aria-label="Read Multi-Account Observability case study"><span data-icon="arrow-up-right" aria-hidden="true"></span></a></article>
+        <article class="project-row"><span class="route-mark" aria-hidden="true">AI</span><div class="project-row-title"><span class="project-kind">Built workflow / engineer reviewed</span><h3><a href="./case-ai.html">AI-Assisted Incident Investigation</a></h3><p>Splunk / Grafana / Microsoft Graph / AWS</p></div><div class="project-row-detail"><p>Connected context becomes incident summaries, possible-cause hypotheses, and recommended checks.</p><p class="human-boundary">The AI proposes. The engineer validates and decides.</p></div><a class="row-link" href="./case-ai.html" aria-label="Read AI-Assisted Incident Investigation case study"><span data-icon="arrow-up-right" aria-hidden="true"></span></a></article>
+      </div>
+    </section>
+    <section class="lab-section wrap" id="lab" aria-labelledby="lab-title">
+      <div class="section-heading"><h2 id="lab-title">Don’t just read it.<br /><span>Put a request through it.</span></h2><p>Change the scope. Test the guardrail. Inspect exactly what the example catalog allows.</p></div>
+      <div class="demo-shell">
+        <form id="request-form" class="demo-input">
+          <div class="demo-heading"><h3>Role request</h3><span>Browser-only demo</span></div>
+          <noscript><p>Enable JavaScript for this demo, or <a href="./case-iam.html">read the IAM case study</a>.</p></noscript>
+          <div class="demo-presets" role="group" aria-label="Example requests"><button type="button" data-preset="allowed">Try read-only access</button><button type="button" data-preset="blocked">Test admin guardrail</button></div>
+          <label for="role-name">Role name</label><input id="role-name" name="role" value="claims-app-readonly" required maxlength="64" pattern="[a-zA-Z0-9_+=,.@\-]+" autocomplete="off" />
+          <div class="form-pair"><div><label for="trust">Trusted service</label><select id="trust" name="trust"><option value="ec2">EC2</option><option value="lambda">Lambda</option></select></div><div><label for="permission">Permission profile</label><select id="permission" name="permission"><option value="claims-bucket-read-only">Bucket read only</option><option value="claims-bucket-read-write">Bucket read / write / delete</option><option value="administrator">Administrator (test rejection)</option></select></div></div>
+          <pre id="yaml-preview" class="request-preview" aria-label="Generated YAML request">name: "claims-app-readonly"
+trust: ec2
+permissions:
+  - claims-bucket-read-only
+owner: claims-platform</pre>
+          <button class="button primary" id="validate-button" type="submit" disabled>Validate request <span data-icon="arrow-right" aria-hidden="true"></span></button><p class="demo-note">Limited sample catalog. No credentials, AWS calls, or resources created. Generated plans are illustrations, not Terraform output.</p>
+        </form>
+        <div class="demo-output"><div class="demo-heading"><h3>Decision &amp; output</h3><span class="output-state" id="output-state">Ready</span></div><p id="validation-message" role="status" aria-live="polite">Validate the request to inspect its trust policy and proposed changes.</p><div class="output-tabs" role="group" aria-label="Choose generated output"><button type="button" data-output="policy" class="selected" aria-pressed="true">Trust policy</button><button type="button" data-output="permissions" aria-pressed="false">Permissions</button><button type="button" data-output="plan" aria-pressed="false">Plan summary</button></div><div class="output-tools"><span>Generated example</span><button type="button" id="copy-output" disabled>Copy output</button></div><pre id="generated-output" tabindex="0" aria-label="Generated output">// Your reviewed output appears here.</pre><p id="copy-message" class="copy-message" role="status"></p><p class="approval-note">Validation is a checkpoint. Deployment still needs review.</p></div>
+      </div>
+    </section>
+    <section class="practice wrap" id="practice" aria-labelledby="practice-title"><div><h2 id="practice-title">A system isn’t finished<br /><span>when it deploys.</span></h2><p>I work across its lifecycle, from a reviewed change to the health check after recovery.</p></div><dl class="practice-list"><div><dt>Declare &amp; automate</dt><dd>Terraform, Git-managed configuration, Ansible/AWX, PowerShell, and Packer templates.</dd></div><div><dt>Observe &amp; investigate</dt><dd>Grafana, Splunk, CloudWatch, and AI-assisted context gathering with engineer review.</dd></div><div><dt>Recover &amp; validate</dt><dd>Zerto and Azure Site Recovery exercises, failover/failback checks, and RTO/RPO validation.</dd></div></dl></section>
+    <section class="contact-section wrap" id="contact"><div class="contact-heading"><h2>Let’s make<br /><span>the complex clear.</span></h2><a class="contact-arrow" href="mailto:khodzhaev@gmail.com" aria-label="Email Aziz Khodzhaev"><span data-icon="arrow-up-right" aria-hidden="true"></span></a></div><div class="contact-bottom"><a class="email-link" href="mailto:khodzhaev@gmail.com">khodzhaev@gmail.com</a><p>Infrastructure. Platform. AI-assisted operations.</p></div></section>
+  </main>
+  <footer class="wrap"><span>© <span data-year>2026</span> Aziz Khodzhaev</span><span>Chicago, Illinois</span><a href="https://github.com/Arkforce">GitHub <span data-icon="arrow-up-right" aria-hidden="true"></span></a></footer>
+  <script type="module" src="./main.js"></script>
+</body>
 </html>

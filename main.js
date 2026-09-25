@@ -91,39 +91,4 @@ if (form) {
   refresh();
 }
 
-const sceneContainer = document.querySelector("#scene");
-if (sceneContainer) {
-  document.querySelector("#reveal-label").textContent =
-    "Select a layer to explore the system";
-  const descriptions = [
-    "Cloud and on-premises. One connected operating model.",
-    "Reviewed requests become repeatable infrastructure changes.",
-    "Signals connect resource health to an engineer’s next decision.",
-  ];
-  let selectLayer = () => {};
-  let layer = 0;
-  document.querySelectorAll("[data-layer]").forEach((button) => {
-    button.addEventListener("click", () => {
-      layer = Number(button.dataset.layer);
-      document.querySelectorAll("[data-layer]").forEach((item) => {
-        const selected = item === button;
-        item.classList.toggle("selected", selected);
-        item.setAttribute("aria-pressed", String(selected));
-      });
-      document.querySelector("#layer-description").textContent =
-        descriptions[layer];
-      selectLayer(layer);
-    });
-  });
-  import("./topology.js")
-    .then(({ startTopology }) => {
-      selectLayer = startTopology(
-        sceneContainer,
-        document.querySelector("#motion-toggle"),
-      );
-      selectLayer(layer);
-    })
-    .catch(() => {
-      /* The labeled static topology remains available. */
-    });
-}
+import "./atlas.js";

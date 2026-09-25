@@ -1,0 +1,420 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-25T01:57:49.473Z",
+  "title": "Design System: Aziz Khodzhaev — Systems atlas",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0027 106.45)",
+          "oklch(26% 0.0027 106.45)",
+          "oklch(38% 0.0027 106.45)",
+          "oklch(49% 0.0027 106.45)",
+          "oklch(61% 0.0027 106.45)",
+          "oklch(72% 0.0027 106.45)",
+          "oklch(84% 0.0027 106.45)",
+          "oklch(95% 0.0027 106.45)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0068 115.71)",
+          "oklch(26% 0.0068 115.71)",
+          "oklch(38% 0.0068 115.71)",
+          "oklch(49% 0.0068 115.71)",
+          "oklch(61% 0.0068 115.71)",
+          "oklch(72% 0.0068 115.71)",
+          "oklch(84% 0.0068 115.71)",
+          "oklch(95% 0.0068 115.71)"
+        ]
+      },
+      "raised": {
+        "role": "neutral",
+        "displayName": "Raised",
+        "tonalRamp": [
+          "oklch(15% 0.0053 106.50)",
+          "oklch(26% 0.0053 106.50)",
+          "oklch(38% 0.0053 106.50)",
+          "oklch(49% 0.0053 106.50)",
+          "oklch(61% 0.0053 106.50)",
+          "oklch(72% 0.0053 106.50)",
+          "oklch(84% 0.0053 106.50)",
+          "oklch(95% 0.0053 106.50)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0100 207.05)",
+          "oklch(26% 0.0100 207.05)",
+          "oklch(38% 0.0100 207.05)",
+          "oklch(49% 0.0100 207.05)",
+          "oklch(61% 0.0100 207.05)",
+          "oklch(72% 0.0100 207.05)",
+          "oklch(84% 0.0100 207.05)",
+          "oklch(95% 0.0100 207.05)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0101 187.82)",
+          "oklch(26% 0.0101 187.82)",
+          "oklch(38% 0.0101 187.82)",
+          "oklch(49% 0.0101 187.82)",
+          "oklch(61% 0.0101 187.82)",
+          "oklch(72% 0.0101 187.82)",
+          "oklch(84% 0.0101 187.82)",
+          "oklch(95% 0.0101 187.82)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0131 126.40)",
+          "oklch(26% 0.0131 126.40)",
+          "oklch(38% 0.0131 126.40)",
+          "oklch(49% 0.0131 126.40)",
+          "oklch(61% 0.0131 126.40)",
+          "oklch(72% 0.0131 126.40)",
+          "oklch(84% 0.0131 126.40)",
+          "oklch(95% 0.0131 126.40)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "tonalRamp": [
+          "oklch(15% 0.1533 122.20)",
+          "oklch(26% 0.1533 122.20)",
+          "oklch(38% 0.1533 122.20)",
+          "oklch(49% 0.1533 122.20)",
+          "oklch(61% 0.1533 122.20)",
+          "oklch(72% 0.1533 122.20)",
+          "oklch(84% 0.1533 122.20)",
+          "oklch(95% 0.1533 122.20)"
+        ]
+      },
+      "accent-ink": {
+        "role": "primary",
+        "displayName": "Accent Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0513 129.09)",
+          "oklch(26% 0.0513 129.09)",
+          "oklch(38% 0.0513 129.09)",
+          "oklch(49% 0.0513 129.09)",
+          "oklch(61% 0.0513 129.09)",
+          "oklch(72% 0.0513 129.09)",
+          "oklch(84% 0.0513 129.09)",
+          "oklch(95% 0.0513 129.09)"
+        ]
+      },
+      "route": {
+        "role": "primary",
+        "displayName": "Route",
+        "tonalRamp": [
+          "oklch(15% 0.0964 125.42)",
+          "oklch(26% 0.0964 125.42)",
+          "oklch(38% 0.0964 125.42)",
+          "oklch(49% 0.0964 125.42)",
+          "oklch(61% 0.0964 125.42)",
+          "oklch(72% 0.0964 125.42)",
+          "oklch(84% 0.0964 125.42)",
+          "oklch(95% 0.0964 125.42)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "tonalRamp": [
+          "oklch(15% 0.1412 27.97)",
+          "oklch(26% 0.1412 27.97)",
+          "oklch(38% 0.1412 27.97)",
+          "oklch(49% 0.1412 27.97)",
+          "oklch(61% 0.1412 27.97)",
+          "oklch(72% 0.1412 27.97)",
+          "oklch(84% 0.1412 27.97)",
+          "oklch(95% 0.1412 27.97)"
+        ]
+      },
+      "accent-divider": {
+        "role": "primary",
+        "displayName": "Accent Divider",
+        "tonalRamp": [
+          "oklch(15% 0.1305 123.55)",
+          "oklch(26% 0.1305 123.55)",
+          "oklch(38% 0.1305 123.55)",
+          "oklch(49% 0.1305 123.55)",
+          "oklch(61% 0.1305 123.55)",
+          "oklch(72% 0.1305 123.55)",
+          "oklch(84% 0.1305 123.55)",
+          "oklch(95% 0.1305 123.55)"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Dark Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0101 196.53)",
+          "oklch(26% 0.0101 196.53)",
+          "oklch(38% 0.0101 196.53)",
+          "oklch(49% 0.0101 196.53)",
+          "oklch(61% 0.0101 196.53)",
+          "oklch(72% 0.0101 196.53)",
+          "oklch(84% 0.0101 196.53)",
+          "oklch(95% 0.0101 196.53)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0142 181.81)",
+          "oklch(26% 0.0142 181.81)",
+          "oklch(38% 0.0142 181.81)",
+          "oklch(49% 0.0142 181.81)",
+          "oklch(61% 0.0142 181.81)",
+          "oklch(72% 0.0142 181.81)",
+          "oklch(84% 0.0142 181.81)",
+          "oklch(95% 0.0142 181.81)"
+        ]
+      },
+      "dark-raised": {
+        "role": "neutral",
+        "displayName": "Dark Raised",
+        "tonalRamp": [
+          "oklch(15% 0.0132 173.39)",
+          "oklch(26% 0.0132 173.39)",
+          "oklch(38% 0.0132 173.39)",
+          "oklch(49% 0.0132 173.39)",
+          "oklch(61% 0.0132 173.39)",
+          "oklch(72% 0.0132 173.39)",
+          "oklch(84% 0.0132 173.39)",
+          "oklch(95% 0.0132 173.39)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0136 120.28)",
+          "oklch(26% 0.0136 120.28)",
+          "oklch(38% 0.0136 120.28)",
+          "oklch(49% 0.0136 120.28)",
+          "oklch(61% 0.0136 120.28)",
+          "oklch(72% 0.0136 120.28)",
+          "oklch(84% 0.0136 120.28)",
+          "oklch(95% 0.0136 120.28)"
+        ]
+      },
+      "dark-muted": {
+        "role": "neutral",
+        "displayName": "Dark Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0213 138.44)",
+          "oklch(26% 0.0213 138.44)",
+          "oklch(38% 0.0213 138.44)",
+          "oklch(49% 0.0213 138.44)",
+          "oklch(61% 0.0213 138.44)",
+          "oklch(72% 0.0213 138.44)",
+          "oklch(84% 0.0213 138.44)",
+          "oklch(95% 0.0213 138.44)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "Dark Line",
+        "tonalRamp": [
+          "oklch(15% 0.0253 140.82)",
+          "oklch(26% 0.0253 140.82)",
+          "oklch(38% 0.0253 140.82)",
+          "oklch(49% 0.0253 140.82)",
+          "oklch(61% 0.0253 140.82)",
+          "oklch(72% 0.0253 140.82)",
+          "oklch(84% 0.0253 140.82)",
+          "oklch(95% 0.0253 140.82)"
+        ]
+      },
+      "dark-error": {
+        "role": "neutral",
+        "displayName": "Dark Error",
+        "tonalRamp": [
+          "oklch(15% 0.0926 29.81)",
+          "oklch(26% 0.0926 29.81)",
+          "oklch(38% 0.0926 29.81)",
+          "oklch(49% 0.0926 29.81)",
+          "oklch(61% 0.0926 29.81)",
+          "oklch(72% 0.0926 29.81)",
+          "oklch(84% 0.0926 29.81)",
+          "oklch(95% 0.0926 29.81)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Wayfinding display",
+        "purpose": "Homepage introduction, with responsive overrides."
+      },
+      "headline": {
+        "displayName": "Section headline",
+        "purpose": "Primary section hierarchy."
+      },
+      "title": {
+        "displayName": "Reading title",
+        "purpose": "Case-study section headings."
+      },
+      "body": {
+        "displayName": "Reading text",
+        "purpose": "General paragraphs; case-study prose increases line-height to 1.8."
+      },
+      "label": {
+        "displayName": "Field label",
+        "purpose": "Visible external field labels."
+      },
+      "code": {
+        "displayName": "Artifact code",
+        "purpose": "Requests and generated examples."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.23,1,.32,1)",
+        "purpose": "CSS transform feedback and exact equivalent easing in the Three.js selection transition."
+      },
+      {
+        "name": "control-transform",
+        "value": "160ms",
+        "purpose": "Enabled button press feedback."
+      },
+      {
+        "name": "control-color",
+        "value": "160ms ease",
+        "purpose": "Background and text-color transitions."
+      },
+      {
+        "name": "atlas-selection",
+        "value": "250ms",
+        "purpose": "Pointer route and view transitions; keyboard and reduced-motion changes are instant."
+      },
+      {
+        "name": "flow-cycle",
+        "value": "5s",
+        "purpose": "Opt-in marker traversal; disabled for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "767px"
+      },
+      {
+        "name": "compact-max",
+        "value": "1100px"
+      },
+      {
+        "name": "large-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Squared action for request validation and case-study links.",
+      "html": "<button type=\"button\" class=\"ds-primary\">Validate request <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
+      "css": ".ds-primary{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);transition:transform 160ms var(--ease-out,cubic-bezier(.23,1,.32,1)),background-color 160ms ease,color 160ms ease;display:inline-flex;align-items:center;justify-content:center;gap:16px;padding:15px 20px;border:1px solid transparent;border-radius:2px;background:var(--ink,#242b2c);color:var(--paper,#ededeb);font-size:13px;font-weight:650;white-space:nowrap;cursor:pointer}.ds-primary svg{width:20px;height:20px;fill:currentColor}.ds-primary:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}.ds-primary:active:not(:disabled){transform:scale(.98)}.ds-primary:disabled{opacity:.5;cursor:default}@media(hover:hover) and (pointer:fine){.ds-primary:hover:not(:disabled){background:var(--route,#4e6421);color:var(--paper,#ededeb)}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}.ds-primary:active:not(:disabled){transform:none}}"
+    },
+    {
+      "name": "Request preset",
+      "kind": "button",
+      "refersTo": "button-preset",
+      "description": "A quiet outlined button for loading a sample request.",
+      "html": "<button type=\"button\" class=\"ds-preset\">Try read-only access</button>",
+      "css": ".ds-preset{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);transition:transform 160ms var(--ease-out,cubic-bezier(.23,1,.32,1)),background-color 160ms ease,color 160ms ease;background:transparent;color:var(--ink,#242b2c);border:1px solid var(--muted,#596160);border-radius:2px;padding:10px 12px;font-size:11px;cursor:pointer}.ds-preset:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}.ds-preset:active:not(:disabled){transform:scale(.98)}.ds-preset:disabled{opacity:.5;cursor:default}@media(hover:hover) and (pointer:fine){.ds-preset:hover:not(:disabled){background:var(--ink,#242b2c);color:var(--paper,#ededeb)}}@media(prefers-reduced-motion:reduce){.ds-preset{transition:none}.ds-preset:active:not(:disabled){transform:none}}"
+    },
+    {
+      "name": "Role name field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Raised-paper request field with an external label.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-role\">Role name</label><input id=\"ds-role\" name=\"role\" value=\"claims-app-readonly\" autocomplete=\"off\" /></div>",
+      "css": ".ds-field{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);color:var(--ink,#242b2c)}.ds-field label{display:block;font-size:12px;font-weight:650;margin-bottom:9px}.ds-field input{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);width:100%;min-width:0;height:44px;background:var(--raised,#f7f7f3);color:var(--ink,#242b2c);border:1px solid var(--line,#c8ccc3);border-radius:2px;padding:10px 12px;font-size:13px;caret-color:var(--route,#4e6421)}.ds-field input:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}"
+    },
+    {
+      "name": "Header navigation",
+      "kind": "nav",
+      "description": "Quiet text links retain the portfolio's direct reading paths.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"./index.html#work\">Work</a><a href=\"./index.html#lab\">Try the workflow</a><a href=\"mailto:khodzhaev@gmail.com\">Let’s talk</a></nav>",
+      "css": ".ds-nav{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);display:flex;align-items:center;gap:32px;color:var(--ink,#242b2c);font-size:14px;font-weight:550}.ds-nav a{color:inherit;text-decoration:none;white-space:nowrap}.ds-nav a:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{text-decoration:underline;text-underline-offset:.22em}}@media(max-width:767px){.ds-nav{gap:15px;font-size:12px}.ds-nav a[href*='#lab']{display:none}}"
+    },
+    {
+      "name": "Selected route",
+      "kind": "custom",
+      "refersTo": "route-selected",
+      "description": "The active project route combines its identifier, name, subtitle, and direction.",
+      "html": "<button class=\"ds-route\" type=\"button\" aria-pressed=\"true\"><span class=\"ds-mark\" aria-hidden=\"true\">I</span><span>Identity &amp; access<small>AWS IAM Role Factory</small></span><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 256 256\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
+      "css": ".ds-route{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);transition:transform 160ms var(--ease-out,cubic-bezier(.23,1,.32,1)),background-color 160ms ease,color 160ms ease;display:grid;grid-template-columns:34px minmax(0,1fr) 20px;align-items:center;gap:13px;padding:13px 12px;background:transparent;color:var(--ink,#242b2c);border:0;border-bottom:1px solid var(--line,#c8ccc3);text-align:left;font-size:15px;font-weight:650;cursor:pointer}.ds-route[aria-pressed='true']{background:var(--accent,#c4e56b);color:var(--accent-ink,#233013);border-color:var(--accent,#c4e56b)}.ds-mark{width:32px;height:32px;border:1px solid currentColor;border-radius:50%;display:inline-grid;place-items:center;font-family:var(--display,'Barlow Semi Condensed',sans-serif);font-size:16px;font-weight:600}.ds-route small{display:block;font-size:11px;font-weight:450;margin-top:3px}.ds-route svg{width:20px;height:20px;fill:currentColor;opacity:0}.ds-route[aria-pressed='true'] svg{opacity:1}.ds-route:not([aria-pressed='true']):focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}.ds-route:not([aria-pressed='true']):active:not(:disabled){transform:scale(.98)}.ds-route:not([aria-pressed='true']):disabled{opacity:.5;cursor:default}@media(hover:hover) and (pointer:fine){.ds-route:not([aria-pressed='true']):hover:not(:disabled){background:var(--surface,#e3e4df)}}@media(prefers-reduced-motion:reduce){.ds-route:not([aria-pressed='true']){transition:none}.ds-route:not([aria-pressed='true']):active:not(:disabled){transform:none}}.ds-route:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}.ds-route:active{transform:scale(.98)}@media(max-width:767px){.ds-route{grid-template-columns:26px minmax(0,1fr);padding:11px 8px;gap:8px;font-size:11px;border:1px solid var(--line,#c8ccc3)}.ds-mark{width:25px;height:25px;font-size:13px}.ds-route small,.ds-route svg{display:none}}@media(prefers-reduced-motion:reduce){.ds-route{transition:none}.ds-route:active{transform:none}}"
+    },
+    {
+      "name": "Reading artifact",
+      "kind": "card",
+      "refersTo": "artifact-panel",
+      "description": "A flat code panel, sampled from the IAM case study, with explicit example context.",
+      "html": "<aside class=\"ds-artifact\"><h2>Sanitized request example</h2><pre>name: claims-app-readonly\naccounts:\n  - &quot;&lt;AWS_ACCOUNT_ID&gt;&quot;\nowner: claims-platform</pre><p>Sanitized example from the IAM Role Factory. Account-specific values stay outside the public repository.</p><a href=\"https://github.com/Arkforce/aws-iam-role-factory\">Inspect the repository</a></aside>",
+      "css": ".ds-artifact{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);background:var(--surface,#e3e4df);color:var(--ink,#242b2c);padding:28px}.ds-artifact h2{margin:0;font-family:var(--body,'Hanken Grotesk Variable',sans-serif);font-size:14px;line-height:1.03;font-weight:650;letter-spacing:0}.ds-artifact pre{font-family:var(--code,'SFMono-Regular',Consolas,'Liberation Mono',monospace);font-weight:400;font-size:11px;line-height:1.8;font-variant-numeric:tabular-nums;overflow-x:auto;padding-block:16px}.ds-artifact p{margin:0 0 20px;color:var(--muted,#596160);font-size:13px;line-height:1.6}.ds-artifact a{display:inline-flex;transition:transform 160ms var(--ease-out,cubic-bezier(.23,1,.32,1)),background-color 160ms ease,color 160ms ease;padding:13px 16px;border:1px solid transparent;border-radius:2px;background:var(--ink,#242b2c);color:var(--paper,#ededeb);font-size:12px;font-weight:650;text-decoration:none}.ds-artifact a:focus-visible{outline:3px solid var(--route,#4e6421);outline-offset:5px}.ds-artifact a:active:not(:disabled){transform:scale(.98)}.ds-artifact a:disabled{opacity:.5;cursor:default}@media(hover:hover) and (pointer:fine){.ds-artifact a:hover:not(:disabled){background:var(--route,#4e6421);color:var(--paper,#ededeb)}}@media(prefers-reduced-motion:reduce){.ds-artifact a{transition:none}.ds-artifact a:active:not(:disabled){transform:none}}@media(max-width:767px){.ds-artifact{padding:24px}}"
+    },
+    {
+      "name": "Case-study workflow",
+      "kind": "custom",
+      "description": "Linked stages carry atlas wayfinding into the reading pages.",
+      "html": "<ol class=\"ds-flow\" aria-label=\"System workflow\"><li>YAML request</li><li>Catalog validation</li><li>Generated policies</li><li>Terraform review</li></ol>",
+      "css": ".ds-flow{font-family:var(--body,'Hanken Grotesk Variable',sans-serif);color:var(--ink,#242b2c);list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding:28px 0;margin:34px 0 54px;border-block:1px solid var(--line,#c8ccc3)}.ds-flow li{position:relative;font-size:14px;font-weight:600;padding-top:22px}.ds-flow li::before{content:'';position:absolute;left:0;top:0;width:9px;height:9px;border:2px solid var(--route,#4e6421);border-radius:50%;background:var(--paper,#ededeb)}.ds-flow li:not(:last-child)::after{content:'';position:absolute;left:16px;top:6px;width:calc(100% + 2px);height:1px;background:var(--line,#c8ccc3)}@media(max-width:767px){.ds-flow{grid-template-columns:1fr 1fr;gap:24px;margin:28px 0 36px}.ds-flow li{font-size:12px}.ds-flow li:nth-child(2)::after{display:none}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Systems atlas",
+    "overview": "Systems atlas treats engineering work as a set of inspectable routes. Mineral surfaces, charcoal typography, and acid-lime selection give the interface the clarity of a wayfinding system; broad headings establish hierarchy while the reading surfaces stay quiet.\n\nSquared panels and controls hold the content. Circular route marks connect the project selector, project index, and workflow diagrams. Physical depth belongs to the spatial model, and motion explains a selected route without becoming necessary to read the work.",
+    "keyCharacteristics": [
+      "Mineral neutrals with acid-lime route selection.",
+      "Self-hosted condensed headings and open reading text.",
+      "Flat, squared content surfaces with circular wayfinding marks.",
+      "Progressive spatial enhancement with a complete reading path."
+    ],
+    "rules": [
+      {
+        "name": "The Selection Rule",
+        "body": "Use acid lime to identify the selected route and its detail, and to anchor the contact surface; use the route color for focus and code emphasis.",
+        "section": "colors"
+      },
+      {
+        "name": "The Map Depth Rule",
+        "body": "Keep document surfaces flat. Reserve physical lighting, cast shadows, and raised geometry for the explanatory map.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do bind surfaces, text, borders, and focus to the theme variables.",
+      "Do use Phosphor SVG icons for actions and lettered route marks for project identity.",
+      "Do keep route selection, case-study links, and useful text available without WebGL.",
+      "Do keep motion optional and respect keyboard and reduced-motion instant selection.",
+      "Do preserve the distinction between examples, reported outcomes, and operational evidence."
+    ],
+    "donts": [
+      "Don't add ambient camera rotation, scroll interception, or autoplay to the atlas.",
+      "Don't replace squared reading panels with rounded floating cards.",
+      "Don't fabricate telemetry, dashboard captures, or evidence to fill a visual surface.",
+      "Don't treat the source-derived documentation as completed visual approval."
+    ]
+  }
+}
